@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --dark-color-1: #151922;
+  --dark-color-2: #0d0907;
+  --dark-color-3: #252321;
+  --dark-color-4: #4d423e;
+  --dark-color-5: #323441;
+
+  --light-color-1: #fbfbfb;
+  --light-color-2: #fffff0;
+  --light-color-3: #f0f8ff;
+  --light-color-4: #dcdcdc;
+  --light-color-5: #fff5ee;
+  --light-color-6: #fafafa;
+
+  --header-dark-color: "#121928";
+  --footer-color: "#1b1a2e";
+}
