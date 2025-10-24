@@ -1,3 +1,5 @@
-#heroContainer {
+.heroContainer {
   background-color: var(--dark-color-1);
+}
+.portfolioImg{
 }
