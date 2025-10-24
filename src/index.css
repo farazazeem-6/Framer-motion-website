@@ -7,6 +7,7 @@
   --dark-color-3: #252321;
   --dark-color-4: #4d423e;
   --dark-color-5: #323441;
+  --dark-color: #000;
 
   --light-color-1: #fbfbfb;
   --light-color-2: #fffff0;
@@ -14,7 +15,10 @@
   --light-color-4: #dcdcdc;
   --light-color-5: #fff5ee;
   --light-color-6: #fafafa;
+  --white-color: #fff;
 
-  --header-dark-color: "#121928";
-  --footer-color: "#1b1a2e";
+  --header-dark-color: #151c2c;
+  --footer-color: #1b1a2e;
+  --purple-color: #4d317b;
+  --purple-button-color: rgba(144, 48, 229);
 }
