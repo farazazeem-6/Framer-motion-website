@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-.header {
+.Header {
   background-color: rgb(21, 28, 44);
   backdrop-filter: blur(10px) brightness(1.1);
   z-index: 100;
@@ -17,65 +17,9 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: rgba(21, 28, 44, 0.35) 0px 5px 15px;
+  -webkit-backdrop-filter: blur(10px);
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-}
-.logoImg {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  border: 6px solid var(--purple-color);
-}
-.logoText {
-  display: flex;
-  flex-direction: column;
-  color: var(--white-color);
-}
-.firstName {
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-.infoText {
-  font-weight: 200;
-  color: var(--white-color);
-  font-size: 1.1rem;
-}
-.navButtons ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  color: #bfc4ca;
-  font-weight: 600;
-}
-.navButtons ul li {
-  cursor: pointer;
-  padding: 8px 15px;
-  margin: 0px 10px;
-  transition: all 0.6s ease;
-  border-radius: 16px;
-}
-.navButtons ul li:not(.activeLink li):hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px) brightness(1.1);
-  color: #fff;
-}
-.toggleBtn i {
-  color: #bfc4ca;
-  cursor: pointer;
-  font-size: 2rem;
-}
-.activeLink li {
-  background-color: var(--purple-button-color);
-  color: white;
-}
-.activeLink li:hover {
-  background-color: var(--purple-button-color);
-  color: white;
+
+.mobileScreen{
+  display: none;
 }
