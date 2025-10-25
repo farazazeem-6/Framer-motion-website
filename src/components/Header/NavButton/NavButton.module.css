@@ -1,0 +1,44 @@
+.navButtons ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #bfc4ca;
+  font-weight: 600;
+}
+.navButtons ul li {
+  cursor: pointer;
+  padding: 8px 15px;
+  margin: 0px 10px;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+.navButtons ul li:not(.activeLink li):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) brightness(1.1);
+  color: #fff;
+}
+.activeLink li {
+  background-color: var(--purple-button-color);
+  color: white;
+  position: relative;
+}
+
+.activeLink li::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(124, 58, 237, 0.6) 0%,
+    rgba(124, 58, 237, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(15px);
+  z-index: -1;
+  pointer-events: none;
+}

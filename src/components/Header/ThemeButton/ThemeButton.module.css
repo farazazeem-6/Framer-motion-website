@@ -1,0 +1,10 @@
+.toggleBtn i {
+  color: #bfc4ca;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.toggleBtn i:hover {
+  color: #fff;
+}
