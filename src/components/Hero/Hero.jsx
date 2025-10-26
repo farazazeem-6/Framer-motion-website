@@ -16,7 +16,9 @@ function Hero() {
       />
 
       {/* add the components here... */}
-      <div className="relative z-10">hero</div>
+      <div className="relative z-10">
+        
+      </div>
     </div>
   );
 }
