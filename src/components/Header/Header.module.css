@@ -94,7 +94,7 @@
     rgba(252, 70, 107, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .infoText {
@@ -132,7 +132,7 @@
   height: calc(var(--vh, 1vh) * 100);
   background: var(--bg-color, #fff);
   box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
-  transition: right 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, right 0.3s ease-in-out;
   z-index: 19999;
   display: flex;
   flex-direction: column;
@@ -356,7 +356,7 @@
     rgba(252, 70, 107, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .mobileInfoText {
@@ -477,5 +477,8 @@
   }
   .logoImgCont {
     padding: 2px;
+  }
+  .Header {
+    padding: 10px 3%;
   }
 }

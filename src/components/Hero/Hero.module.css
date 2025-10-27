@@ -1,5 +1,7 @@
 .heroContainer {
   background-color: var(--dark-color-1);
 }
-.portfolioImg{
+.heroTextCont {
+  color: white;
+  margin-top: 100px;
 }

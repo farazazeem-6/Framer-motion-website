@@ -17,7 +17,11 @@ function Hero() {
 
       {/* add the components here... */}
       <div className="relative z-10">
-        
+        <div className={styles.heroTextCont}>
+          <h1>M.Faraz</h1>
+          <h3>I'm Frontend Developer</h3>
+        </div>
+        <div className={styles.heroImgCont}></div>
       </div>
     </div>
   );
