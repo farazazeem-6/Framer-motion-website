@@ -9,6 +9,14 @@ import { NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 
+function setRealVh() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+window.addEventListener("resize", setRealVh);
+window.addEventListener("orientationchange", setRealVh);
+setRealVh();
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   function toggleMenu() {
