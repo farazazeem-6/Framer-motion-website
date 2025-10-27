@@ -7,7 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
-import LaunchIcon from '@mui/icons-material/Launch';
+import LaunchIcon from "@mui/icons-material/Launch";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,19 @@ function Header() {
     <>
       <div className={styles.Header}>
         <div>
-          <HeaderLogo />
+          <div className={styles.logo}>
+            <div className={styles.logoImgCont}>
+              <img
+                className={styles.logoImg}
+                src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                alt=""
+              />
+            </div>
+            <div className={styles.logoText}>
+              <p className={styles.firstName}>Muhammad Faraz </p>
+              <p className={styles.infoText}>Front end developer</p>
+            </div>
+          </div>
         </div>
         <div className={styles.fullScreenNav}>
           <NavButton />
@@ -34,30 +46,59 @@ function Header() {
           <ThemeButton />
           <div className={styles.hamburger}>
             <button onClick={toggleMenu} className={styles.hamburgerBtn}>
-              <MenuIcon fontSize="medium" color="inherit" />
+              <MenuIcon
+                fontSize="inherit"
+                sx={{
+                  fontSize: {
+                    xs: "1rem", // Small screen
+                    sm: "1.25rem",
+                    md: "1.5rem", // Medium and up
+                  },
+                  color: "inherit",
+                }}
+              />
             </button>
           </div>
         </div>
       </div>
 
+      {/* //mobile screen header  */}
       <div
         className={`${styles.mobileMenu} ${isMenuOpen ? styles.active : ""}`}
       >
         <div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <HeaderLogo />
+          <div className={styles.logoSectionCont} style={{}}>
+            <div>
+              <div className={styles.mobileLogo}>
+                <div className={styles.mobileLogoImgCont}>
+                  <img
+                    className={styles.mobileLogoImg}
+                    src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                    alt=""
+                  />
+                </div>
+                <div className={styles.mobileLogoText}>
+                  <p className={styles.mobileFirstName}>Muhammad Faraz </p>
+                  <p className={styles.mobileInfoText}>Front end developer</p>
+                </div>
+              </div>
+            </div>
             <button onClick={toggleMenu} className={styles.closeMenuBtn}>
-              <CloseIcon fontSize="medium" color="inherit" />
+              <CloseIcon
+                fontSize="inherit"
+                sx={{
+                  fontSize: {
+                    xs: "1rem", // Small screen
+                    sm: "1.25rem",
+                    md: "1.5rem", // Medium and up
+                  },
+                  color: "inherit",
+                }}
+              />
             </button>
           </div>
 
-          <hr style={{ marginTop: "40px", color: "#FFFAF0", opacity: "0.1" }} />
+          <hr className={styles.horizontalLine} />
           <div className={styles.mobileMenuNavButtons}>
             <ul>
               <NavLink
@@ -105,15 +146,23 @@ function Header() {
         </div>
 
         <div className={styles.sideBarFooter}>
-          <button className={styles.getInTouchBtn} >
+          <button className={styles.getInTouchBtn}>
             Get in touch
             <i class="ri-external-link-line"></i>
           </button>
           <div className={styles.socialIcon}>
-            <a href=""><i class="ri-github-line"></i></a>
-            <a href=""><i class="ri-linkedin-line"></i></a>
-            <a href=""><i class="ri-instagram-line"></i></a>
-            <a href=""><i class="ri-tiktok-fill"></i></a>
+            <a href="">
+              <i class="ri-github-line"></i>
+            </a>
+            <a href="">
+              <i class="ri-linkedin-line"></i>
+            </a>
+            <a href="">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="">
+              <i class="ri-tiktok-fill"></i>
+            </a>
           </div>
         </div>
       </div>
