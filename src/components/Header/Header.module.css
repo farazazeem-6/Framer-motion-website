@@ -129,7 +129,9 @@
   right: -100%;
   width: 75%;
   max-width: 450px;
-  height: 100vh;
+  /* height: 100vh; */
+  /* height: 100%; */
+  height: calc(var(--vh, 1vh) * 100);
   background: var(--bg-color, #fff);
   box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
   transition: right 0.3s ease-in-out;
@@ -390,17 +392,17 @@
     padding: 10px 15px 5px;
   }
   .horizontalLine {
-    color: #fffaf0;
     opacity: 0.1;
     margin-top: 20px;
   }
   .mobileMenu {
-    width: 80%;
+    width: 85%;
     max-width: 100%;
     padding: 20px 10px 20px 10px;
   }
   .mobileInfoText {
     font-size: 12px;
+    color: #4c3f6c;
   }
   .mobileFirstName {
     font-size: 1rem;
@@ -411,18 +413,15 @@
     height: 30px;
   }
   .mobileMenuNavButtons {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .mobileMenuNavButtons ul {
-    font-size: 14px;
-    color: #bfc4ca;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 550;
   }
   .mobileMenuNavButtons ul li {
-    cursor: pointer;
-    padding: 10px 20px;
+    padding: 14px 22px;
     margin: 3px 7px;
-    transition: all 0.3s ease;
     border-radius: 10px;
   }
 
@@ -440,9 +439,9 @@
     border-top: 1px solid #4c3f6c;
   }
   .getInTouchBtn {
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
+    padding: 14px 23px;
+    font-size: 18px;
+    font-weight: 550;
     border-radius: 10px;
   }
   .getInTouchBtn i {
@@ -458,7 +457,7 @@
     margin-top: 10px;
   }
   .socialIcon a {
-    font-size: 14px;
+    font-size: 20px;
     padding: 3px 5px;
     border-radius: 10px;
   }
@@ -471,5 +470,15 @@
   }
   .horizontalLine {
     margin-top: 5px;
+  }
+  .mobileLogoImgCont {
+    padding: 2px;
+  }
+  .mobileLogoImg {
+    width: 40px;
+    height: 50px;
+  }
+  .logoImgCont {
+    padding: 2px;
   }
 }
