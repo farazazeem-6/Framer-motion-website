@@ -1,5 +1,8 @@
 .heroContainer {
-  background-color: var(--dark-color-1);
+  /* background-color: var(--dark-color-1); */
+  /* background-color: #111827; */
+  background-color: rgba(17, 24, 39);
+  backdrop-filter: blur(100px);
 }
 .heroInnerContainer {
   display: flex;
@@ -154,7 +157,7 @@
 .label1 {
   top: 12%;
   right: -1%;
-  animation-delay: 0s;
+  animation-delay: 1s;
 }
 
 .label2 {

@@ -5,16 +5,14 @@ import Skill from "../Skills/Skill";
 import Project from "../Projectss/Project";
 import Testimonials from "../Testimonials/Testimonials";
 import { Contact } from "lucide-react";
+import ScrollDirectionMarquee from "../TextMarqueeComp/TextMarquee";
 
 function Home() {
   return (
     <Fragment>
       <Header />
       <Hero />
-      <Skill />
-      <Project />
-      <Testimonials />
-      <Contact />
+      <ScrollDirectionMarquee/>
     </Fragment>
   );
 }
