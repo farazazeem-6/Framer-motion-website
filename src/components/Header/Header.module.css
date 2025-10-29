@@ -5,10 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 .Header {
-  background-color: rgb(21, 28, 44);
+  background-color: rgb(21, 28, 44, 0.7);
   backdrop-filter: blur(10px) brightness(1.1);
   z-index: 100;
-  padding: 20px 5%;
+  padding: 10px 5%;
   position: fixed;
   left: 0;
   right: 0;
@@ -17,7 +17,6 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
-  -webkit-backdrop-filter: blur(10px);
 }
 
 /* header css for full screen  */
@@ -31,7 +30,7 @@
 
 .logoImgCont {
   display: inline-block;
-  padding: 6px;
+  padding: 5px;
   border-radius: 50%;
   background: var(--purple-color);
   cursor: pointer;
@@ -59,8 +58,8 @@
 }
 
 .logoImg {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -84,7 +83,7 @@
 
 .firstName {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 .firstName:hover {
@@ -100,7 +99,7 @@
 .infoText {
   font-weight: 200;
   color: var(--white-color);
-  font-size: 1.1rem;
+  font-size: 12px;
 }
 
 /* //mobile screen hamburger button css */
@@ -127,8 +126,8 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 75%;
-  max-width: 450px;
+  width: 60%;
+  max-width: 350px;
   height: calc(var(--vh, 1vh) * 100);
   background: var(--bg-color, #fff);
   box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
@@ -137,7 +136,7 @@
   display: flex;
   flex-direction: column;
   border-left: 0.5px solid #4c3f6c;
-  background-color: rgb(21, 28, 44);
+  background-color: rgba(21, 28, 44, 0.9);
   backdrop-filter: blur(10px) brightness(1.1);
   justify-content: space-between;
 }
@@ -145,23 +144,23 @@
   right: 0;
 }
 .mobileMenuNavButtons {
-  margin-top: 40px;
-  padding: 0px 30px 30px 20px;
+  margin-top: 20px;
+  padding: 0px 10px 30px 10px;
 }
 .mobileMenuNavButtons ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 14px;
   color: #bfc4ca;
   font-weight: 600;
 }
 .mobileMenuNavButtons ul li {
   cursor: pointer;
-  padding: 18px 15px;
+  padding: 14px 15px;
   margin: 5px 10px;
   transition: all 0.3s ease;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 .mobileMenuNavButtons ul li:hover {
   transform: scaleY(1.1);
@@ -180,7 +179,7 @@
 .activeLink li::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -217,11 +216,11 @@
 .getInTouchBtn {
   color: white;
   background-color: var(--purple-button-color);
-  padding: 20px 30px;
+  padding: 10px 20px;
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -230,12 +229,12 @@
   transform: scale(1.1);
 }
 .getInTouchBtn i {
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .getInTouchBtn::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -255,12 +254,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 35px;
-  margin-top: 20px;
+  gap: 15px;
+  margin-top: 10px;
 }
 .socialIcon a {
   color: #bfc4ca;
-  font-size: 1.8rem;
+  font-size: 20px;
   padding: 6px 10px;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
@@ -277,17 +276,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 30px 10px;
+  padding: 20px 20px 10px;
 }
 .horizontalLine {
   color: #fffaf0;
   opacity: 0.1;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .mobileLogo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   position: relative;
 }
 
@@ -321,8 +320,8 @@
 }
 
 .mobileLogoImg {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -346,7 +345,7 @@
 
 .mobileFirstName {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 .mobileFirstName:hover {
@@ -362,7 +361,7 @@
 .mobileInfoText {
   font-weight: 200;
   color: var(--white-color);
-  font-size: 1.1rem;
+  font-size: 14px;
 }
 
 /* responsiveness css  */
@@ -399,32 +398,32 @@
   .mobileInfoText {
     font-size: 14px;
     color: #4c3f6c;
-    font-weight: 300;
+    font-weight: 500;
   }
   .mobileFirstName {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
   }
   .logoImg {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
   .mobileMenuNavButtons {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .mobileMenuNavButtons ul {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 550;
   }
   .mobileMenuNavButtons ul li {
-    padding: 14px 22px;
+    padding: 12px 18px;
     margin: 3px 7px;
     border-radius: 10px;
   }
 
   .activeLink li::after {
-    bottom: -20px;
-    height: 20px;
+    bottom: -10px;
+    height: 10px;
     filter: blur(10px);
   }
   .closeMenuBtn {
@@ -436,8 +435,8 @@
     border-top: 1px solid #4c3f6c;
   }
   .getInTouchBtn {
-    padding: 14px 23px;
-    font-size: 18px;
+    padding: 12px 18px;
+    font-size: 16px;
     font-weight: 550;
     border-radius: 10px;
   }
@@ -446,7 +445,7 @@
   }
   .getInTouchBtn::after {
     bottom: -10px;
-    height: 20px;
+    height: 10px;
     filter: blur(10px);
   }
   .socialIcon {
@@ -460,20 +459,20 @@
   }
   .mobileLogo {
     gap: 5px;
-    padding: 15px;
+    padding: 10px;
   }
   .mobileMenu {
     padding: 0px;
   }
   .horizontalLine {
-    margin-top: 5px;
+    margin-top: 2px;
   }
   .mobileLogoImgCont {
     padding: 2px;
   }
   .mobileLogoImg {
-    width: 40px;
-    height: 50px;
+    width: 50px;
+    height: 55px;
   }
   .logoImgCont {
     padding: 2px;

@@ -30,7 +30,7 @@ function Header() {
             <div className={styles.logoImgCont}>
               <img
                 className={styles.logoImg}
-                src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
                 alt=""
               />
             </div>
@@ -58,9 +58,9 @@ function Header() {
                 fontSize="inherit"
                 sx={{
                   fontSize: {
-                    xs: "1.3rem", // Small screen
-                    sm: "1.5rem",
-                    md: "2rem", // Medium and up
+                    xs: "16px", // Small screen
+                    sm: "18px",
+                    md: "22px", // Medium and up
                   },
                   color: "inherit",
                 }}
@@ -81,7 +81,7 @@ function Header() {
                 <div className={styles.mobileLogoImgCont}>
                   <img
                     className={styles.mobileLogoImg}
-                    src="https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                    src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
                     alt=""
                   />
                 </div>
@@ -96,9 +96,9 @@ function Header() {
                 fontSize="inherit"
                 sx={{
                   fontSize: {
-                    xs: "1.3rem", // Small screen
-                    sm: "1.5rem",
-                    md: "2rem", // Medium and up
+                    xs: "16px", // Small screen
+                    sm: "18px",
+                    md: "22px", // Medium and up
                   },
                   color: "inherit",
                 }}
@@ -156,20 +156,20 @@ function Header() {
         <div className={styles.sideBarFooter}>
           <button className={styles.getInTouchBtn}>
             Get in touch
-            <i class="ri-external-link-line"></i>
+            <i className="ri-external-link-line"></i>
           </button>
           <div className={styles.socialIcon}>
             <a href="">
-              <i class="ri-github-line"></i>
+              <i className="ri-github-line"></i>
             </a>
             <a href="">
-              <i class="ri-linkedin-line"></i>
+              <i className="ri-linkedin-line"></i>
             </a>
             <a href="">
-              <i class="ri-instagram-line"></i>
+              <i className="ri-instagram-line"></i>
             </a>
             <a href="">
-              <i class="ri-tiktok-fill"></i>
+              <i className="ri-tiktok-fill"></i>
             </a>
           </div>
         </div>
