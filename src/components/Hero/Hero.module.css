@@ -1,7 +1,255 @@
 .heroContainer {
   background-color: var(--dark-color-1);
 }
+.heroInnerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 10%;
+  gap: 35px;
+}
 .heroTextCont {
+  max-width: 700px;
+}
+.heroTextCont h1 {
   color: white;
-  margin-top: 100px;
+  font-size: 3.8rem;
+  font-weight: 800;
+}
+.motionText {
+  margin-left: 15px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #9b27af;
+}
+.dot {
+  color: #9b27af;
+}
+.heroTextCont h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 650;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.heroTextCont p {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.studyInfo {
+  margin-bottom: 10px;
+}
+.roleText {
+  margin-bottom: 10px;
+}
+
+/* custom button css  */
+.resumeBtn {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding: 5px 20px;
+  margin-top: 30px;
+}
+
+.resumeBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.resumeBtn:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+.heroImgCont {
+  padding: 12px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.skillsText {
+  margin-top: 5px;
+  font-weight: 800;
+}
+.heroImgCont img:hover {
+  border-color: #c52929;
+}
+.heroImgCont img {
+  /* width: 100%; */
+  width: 500px;
+  border-radius: 50%;
+  border: 10px solid #9b27af;
+  transition: all 0.3s ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* floating label css  */
+
+.label {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  color: #333;
+  animation: float 3s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  font-size: 14px;
+  border: 1px solid #fff;
+}
+
+.label:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Icon positioned at top-left corner of label */
+.labelIcon {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  border: 3px solid #fff;
+  z-index: 10;
+}
+
+/* Individual label positions and animations */
+.label1 {
+  top: 12%;
+  right: -1%;
+  animation-delay: 0s;
+}
+
+.label2 {
+  top: 25%;
+  left: -10%;
+  animation-delay: 0.5s;
+}
+
+.label3 {
+  bottom: 35%;
+  right: -10%;
+  animation-delay: 1s;
+}
+
+.label4 {
+  bottom: 20%;
+  left: -2%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Icon colors - for your reference */
+.iconPurple {
+  background: #1b247e;
+}
+
+.iconGreen {
+  background: #9c27b0;
+}
+
+.iconCyan {
+  background: #2fc5dc;
+}
+
+.iconRed {
+  background: #c62a2a;
+}
+@media (max-width: 1200px) {
+  .heroInnerContainer {
+    padding: 11rem 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  .heroImgCont {
+    display: none;
+  }
+  .heroInnerContainer {
+    justify-content: center;
+    padding: 8rem 5%;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .heroTextCont h1 {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  .heroTextCont h3 {
+    font-size: 1.4rem;
+    font-weight: 650;
+    margin-bottom: 35px;
+  }
+  .heroTextCont p {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  .studyInfo {
+    margin-bottom: 20px;
+  }
+  .roleText {
+    margin-bottom: 20px;
+  }
+  .motionText {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroTextCont h1 {
+    font-size: 2.6rem;
+  }
+  .heroTextCont h3 {
+    font-size: 1.2rem;
+  }
+  .heroTextCont p {
+    font-size: 12px;
+  }
 }
