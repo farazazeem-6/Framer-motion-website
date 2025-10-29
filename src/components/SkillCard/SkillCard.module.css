@@ -1,0 +1,30 @@
+.SkillCardContainer {
+  border: 1px solid #7e7e7e;
+  width: 250px;
+  padding: 25px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: rgba(29, 34, 50);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.SkillCardContainer:hover {
+  transform: translateY(-10px);
+  z-index: 9000;
+  background-color: #1e2f46;
+}
+
+.skillIcon img {
+  width: 50px;
+  padding: 10px;
+  background-color: rgba(94, 92, 92, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+.skillName p {
+  color: white;
+  font-weight: 800;
+}

@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../src/Layout/Layout";
 import Hero from "./components/Hero/Hero";
-import Home from "../src/components/Pages/Home";
+import Home from "./Pages/Home";
 import Skill from "./components/Skills/Skill";
 import Project from "./components/Projectss/Project";
 import Testimonials from "./components/Testimonials/Testimonials";
