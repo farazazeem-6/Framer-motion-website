@@ -23,11 +23,11 @@ function ScrollDirectionMarquee() {
 
   return (
     <div className={styles.marqueeWrapper}>
-      <Marquee direction={direction}>
-        ANDROID DEVELOPER  |  IOS DEVELOPER  |  FRONTEND DEVELOPER
+      <Marquee direction={direction} speed={100}>
+        | ANDROID DEVELOPER | IOS DEVELOPER | FRONTEND DEVELOPER |
       </Marquee>
-      <Marquee direction={direction === "left" ? "right" : "left"}>
-        FRONTEND DEVELOPER  |  IOS DEVELOPER  |  ANDROID DEVELOPER
+      <Marquee direction={direction === "left" ? "right" : "left"} speed={100}>
+        | FRONTEND DEVELOPER | IOS DEVELOPER | ANDROID DEVELOPER |
       </Marquee>
     </div>
   );
