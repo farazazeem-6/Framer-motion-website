@@ -1,0 +1,154 @@
+.skillOuterContainer {
+  padding: 20px 8% 20px;
+  background-color: rgb(26, 26, 46);
+  backdrop-filter: blur(10px) brightness(1.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skillHeading {
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+}
+.gradText {
+  background: #3f5efb;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.skillText {
+  max-width: 700px;
+  position: relative;
+  padding: 30px 0px;
+}
+.skillText p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.skillText::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 10px;
+  bottom: 10px;
+}
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px 0px;
+}
+.skillBoxes {
+  margin-top: 10px;
+}
+.skillBoxes h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+/* Add these to your existing Skill.module.css */
+
+.skillTextLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 10px;
+  bottom: 10px;
+}
+
+.frontEndLine {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 163, 241, 0.6) 0%,
+    rgba(167, 133, 226, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.backendLine {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 241, 39, 0.6) 0%,
+    rgba(160, 216, 149, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.stateManagLine {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(177, 88, 4, 0.6) 0%,
+    rgba(216, 179, 111, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.toolsManagmentLine {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 97, 212, 0.6) 0%,
+    rgba(111, 194, 233, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 650px) {
+  .boxes {
+    justify-content: center;
+  }
+}
