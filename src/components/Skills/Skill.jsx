@@ -218,8 +218,7 @@ function Skill() {
           </div>
         </RevealOnScroll>
       </div>
-
-      <About/>
+      <About />
     </div>
   );
 }
