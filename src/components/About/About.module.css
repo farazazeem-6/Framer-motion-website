@@ -35,7 +35,7 @@
 }
 @media (max-width: 500px) {
   .aboutData {
-    padding: 40px 0px 40px;
+    padding: 10px 0px 10px;
   }
   .journeyText {
     padding: 4px 10px;
@@ -45,8 +45,9 @@
 }
 @media (max-width: 450px) {
   .aboutData {
-    padding: 80px 0px;
+    padding: 10px 0px;
     align-items: center;
     justify-content: center;
+    gap: 5px;
   }
 }

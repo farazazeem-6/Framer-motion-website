@@ -38,7 +38,7 @@ function About() {
           <TechStackGlobe />
         </div>
         <div className={styles.aboutText}>
-          <div style={{ width: "100%", maxWidth: "100%", overflow: "hidden" }}>
+          <div>
             <TextRevealScroll
               text="My Next Mission is to learn WEB 3.0 as I already know much about cryptocurrency and learning SolidityJS"
               className="w-full"
