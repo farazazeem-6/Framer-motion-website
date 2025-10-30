@@ -17,15 +17,18 @@ export const TextReveal = ({ children, className }) => {
   const words = children.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[10vh]", className)}>
+    <div
+      ref={targetRef}
+      className={cn("relative z-0 h-[10vh] w-full", className)}
+    >
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
+          "sticky top-0 mx-auto flex h-[50%] w-full max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
         }
       >
         <span
           className={
-            "flex flex-wrap p-5 text-2xl font-bold text-black/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-2xl dark:text-white/20 leading-relaxed gap-x-2 gap-y-1"
+            "flex flex-wrap w-full py-12 px-3 font-bold text-black/20 dark:text-white/20 leading-relaxed gap-x-2 gap-y-2 text-[14px] [@media(min-width:500px)]:py-12 [@media(min-width:500px)]:px-5 sm:text-lg sm:py-5 sm:px-5 md:text-xl md:py-6 md:px-6 lg:text-2xl lg:py-8 lg:px-8 xl:text-3xl xl:py-10 xl:px-10 2xl:text-4xl 2xl:py-12 2xl:px-12"
           }
         >
           {words.map((word, i) => {
@@ -46,12 +49,9 @@ export const TextReveal = ({ children, className }) => {
 const Word = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <span className="relative mx-1 lg:mx-1.5">
+    <span className="relative mx-1 lg:mx-1.5 inline-block break-words">
       <span className="absolute opacity-30">{children}</span>
-      <motion.span
-        style={{ opacity }}
-        className="text-black dark:text-white"
-      >
+      <motion.span style={{ opacity }} className="text-black dark:text-white">
         {children}
       </motion.span>
     </span>

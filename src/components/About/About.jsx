@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../About/About.module.css";
 import TechStackGlobe from "../TechStackGlobe/TechStackGlobe";
-import TextRevealComp from "../TextReveal/TextReveal";
 import { styled } from "@mui/material/styles";
 import Divider from "@mui/material/Divider";
+import { TextRevealScroll } from "../TextReveal/TextReveal";
 
 const Root = styled("div")(({ theme }) => ({
   width: "100%",
@@ -28,16 +28,7 @@ function About() {
               fontWeight: 500,
             }}
           >
-            <p
-              style={{
-                border: "1px solid #333",
-                padding: "8px 20px",
-                borderRadius: "20px",
-                backgroundColor: "rgb(29,34,50)",
-              }}
-            >
-              About My Journey
-            </p>
+            <p className={styles.journeyText}>About My Journey</p>
           </Divider>
         </Root>
       </div>
@@ -47,7 +38,12 @@ function About() {
           <TechStackGlobe />
         </div>
         <div className={styles.aboutText}>
-          <TextRevealComp />
+          <div style={{ width: "100%", maxWidth: "100%", overflow: "hidden" }}>
+            <TextRevealScroll
+              text="My Next Mission is to learn WEB 3.0 as I already know much about cryptocurrency and learning SolidityJS"
+              className="w-full"
+            />
+          </div>
         </div>
       </div>
     </div>

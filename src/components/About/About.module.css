@@ -1,14 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
 .aboutData {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 10px 0px 30px;
+  padding: 10px 0px 10px;
 }
 .aboutHeading {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.journeyText {
+  border: 1px solid #333;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: rgb(29, 34, 50);
 }
 @media (max-width: 950px) {
   .aboutData {
@@ -21,8 +33,20 @@
     align-items: center;
   }
 }
-@media (max-width:500px) {
-  .aboutData{
-    padding: 10px 30px 30px;
+@media (max-width: 500px) {
+  .aboutData {
+    padding: 40px 0px 40px;
+  }
+  .journeyText {
+    padding: 4px 10px;
+    font-size: 12px;
+    border: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .aboutData {
+    padding: 80px 0px;
+    align-items: center;
+    justify-content: center;
   }
 }
