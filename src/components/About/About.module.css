@@ -1,0 +1,23 @@
+.aboutData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0px 30px;
+}
+.aboutHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 950px) {
+  .aboutData {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 850px) {
+  .aboutData {
+    flex-direction: column;
+    align-items: center;
+  }
+}

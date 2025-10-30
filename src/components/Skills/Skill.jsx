@@ -18,6 +18,7 @@ import databaseImg from "../../utils/images/database.png";
 import boxesImg from "../../utils/images/boxes.png";
 import postamnImg from "../../utils/images/postman-.png";
 import contextApiImg from "../../utils/images/modelcontext.png";
+import About from "../About/About";
 
 const frontEndSkills = {
   [ReactImg]: "React JS",
@@ -190,6 +191,35 @@ function Skill() {
           </div>
         </RevealOnScroll>
       </div>
+
+      <div className={styles.skillCalcs}>
+        <RevealOnScroll delay={0.1}>
+          <div className={styles.techCalcs}>
+            <p className={styles.numberText}>21</p>
+            <p>Technologies</p>
+          </div>
+        </RevealOnScroll>
+        <RevealOnScroll delay={0.1}>
+          <div className={styles.categoryCalcs}>
+            <p className={styles.numberText}>5</p>
+            <p>Categories</p>
+          </div>
+        </RevealOnScroll>
+        <RevealOnScroll delay={0.1}>
+          <div className={styles.experienceCalcs}>
+            <p className={styles.numberText}>3+ Years</p>
+            <p>Experience</p>
+          </div>
+        </RevealOnScroll>
+        <RevealOnScroll delay={0.1}>
+          <div className={styles.projectsCalcs}>
+            <p className={styles.numberText}>50+</p>
+            <p>Projects</p>
+          </div>
+        </RevealOnScroll>
+      </div>
+
+      <About/>
     </div>
   );
 }

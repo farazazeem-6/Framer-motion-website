@@ -9,6 +9,7 @@ import Skill from "./components/Skills/Skill";
 import Project from "./components/Projectss/Project";
 import Testimonials from "./components/Testimonials/Testimonials";
 import { Contact } from "lucide-react";
+import PageWrapper from "./components/PageWrapper/PageWrapper";
 
 const router = createBrowserRouter([
   {
@@ -21,19 +22,35 @@ const router = createBrowserRouter([
       },
       {
         path: "skills",
-        element: <Skill />,
+        element: (
+          <PageWrapper>
+            <Skill />
+          </PageWrapper>
+        ),
       },
       {
         path: "projects",
-        element: <Project />,
+        element: (
+          <PageWrapper>
+            <Project />
+          </PageWrapper>
+        ),
       },
       {
         path: "testimonials",
-        element: <Testimonials />,
+        element: (
+          <PageWrapper>
+            <Testimonials />
+          </PageWrapper>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <PageWrapper>
+            <Contact />
+          </PageWrapper>
+        ),
       },
     ],
   },

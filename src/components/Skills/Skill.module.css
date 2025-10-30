@@ -53,6 +53,7 @@
   gap: 20px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  width: 100%;
   padding: 10px 0px;
 }
 .skillBoxes {
@@ -147,8 +148,73 @@
   pointer-events: none;
 }
 
+.skillCalcs {
+  padding: 30px 70px;
+  border: 1px solid #7e7e7e;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgba(29, 34, 50);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  color: #bfc4ca;
+  font-weight: 500;
+  margin: 60px 0px 60px;
+}
+.techCalcs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.categoryCalcs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.experienceCalcs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.projectsCalcs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.numberText {
+  color: #8a63ba;
+  font-size: 1.8rem;
+  font-weight: 900;
+  transition: transform 0.2s ease-in-out;
+}
+.numberText:hover {
+  transform: scale(1.1);
+}
+
+@media(max-width:750px){
+  .skillCalcs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 20px;
+  }
+}
 @media (max-width: 650px) {
   .boxes {
     justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .numberText{
+    font-size: 16px;
+  }
+  .skillCalcs{
+    font-size: 12px;
   }
 }
