@@ -21,3 +21,8 @@
     align-items: center;
   }
 }
+@media (max-width:500px) {
+  .aboutData{
+    padding: 10px 30px 30px;
+  }
+}
