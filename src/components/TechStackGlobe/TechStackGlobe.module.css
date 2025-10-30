@@ -3,7 +3,7 @@
   display: flex;
   width: 100%;
   max-width: 500px; /* max-w-lg = 32rem = 512px */
-  height: 500px;
+  height: 330px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -11,12 +11,3 @@
   background-color: transparent; /* or your background color */
   /* padding: 20px 80px 80px 80px; */
 }
-
-/* If you want centered on page */
-/* .globeWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  background-color: rgb(26, 26, 46);
-} */

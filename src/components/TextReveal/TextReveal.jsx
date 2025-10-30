@@ -6,7 +6,7 @@ export function TextRevealScroll({ text, className = "" }) {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className={`min-h-[40vh] flex items-center w-full ${className}`}>
+    <div ref={containerRef} className={`min-h-[10vh] flex items-center w-full ${className}`}>
       <div className="flex flex-wrap gap-x-2 gap-y-1 px-3 py-8 w-full max-w-full">
         {words.map((word, index) => (
           <motion.span
