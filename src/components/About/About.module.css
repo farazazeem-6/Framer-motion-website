@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 10px 0px 10px;
+  padding: 10px 100px 10px;
 }
 .aboutHeading {
   display: flex;
@@ -31,6 +31,7 @@
   .aboutData {
     flex-direction: column;
     align-items: center;
+    padding: 30px 40px;
   }
 }
 @media (max-width: 500px) {

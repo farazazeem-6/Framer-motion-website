@@ -18,6 +18,7 @@ function Home() {
       <Hero />
       <ScrollDirectionMarquee/>
       <Skill/>
+      <Project/>
     </Fragment>
   );
 }

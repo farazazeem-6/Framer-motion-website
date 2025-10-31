@@ -45,7 +45,7 @@ const tools = {
 };
 
 // Reusable Animation Wrapper
-const RevealOnScroll = ({ children, delay = 0 }) => {
+export const RevealOnScroll = ({ children, delay = 0 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
 
@@ -62,7 +62,7 @@ const RevealOnScroll = ({ children, delay = 0 }) => {
 };
 
 // Animated Line Component (for ::after effect)
-const AnimatedLine = ({ className }) => {
+export const AnimatedLine = ({ className }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.5 });
 
@@ -108,15 +108,12 @@ function Skill() {
             </div>
             <div className={styles.boxes}>
               {Object.entries(frontEndSkills).map(([imgSrc, text], index) => (
-                <motion.div
+                <SkillCard
                   key={imgSrc}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <SkillCard imgSrc={imgSrc} text={text} />
-                </motion.div>
+                  imgSrc={imgSrc}
+                  text={text}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -131,15 +128,12 @@ function Skill() {
             </div>
             <div className={styles.boxes}>
               {Object.entries(backEndSkills).map(([imgSrc, text], index) => (
-                <motion.div
+                <SkillCard
                   key={imgSrc}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <SkillCard imgSrc={imgSrc} text={text} />
-                </motion.div>
+                  imgSrc={imgSrc}
+                  text={text}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -154,15 +148,12 @@ function Skill() {
             </div>
             <div className={styles.boxes}>
               {Object.entries(statekills).map(([imgSrc, text], index) => (
-                <motion.div
+                <SkillCard
                   key={imgSrc}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <SkillCard imgSrc={imgSrc} text={text} />
-                </motion.div>
+                  imgSrc={imgSrc}
+                  text={text}
+                  index={index}
+                />
               ))}
             </div>
           </div>
