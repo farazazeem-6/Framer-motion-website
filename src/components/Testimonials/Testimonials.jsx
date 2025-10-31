@@ -93,6 +93,10 @@ function Testimonials() {
 
       {/* Testimonials Marquee */}
       <MarqueeDemo />
+      <div className={styles.testimonialsFooter}>
+        <p>Ready to join these satisfied clients?</p>
+        <button className={styles.testimonialbtn}>Start Your Project Today</button>
+      </div>
     </div>
   );
 }
