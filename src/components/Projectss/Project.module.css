@@ -50,8 +50,8 @@
 
 .projectBoxesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
   padding: 20px;
   width: 100%;
   max-width: 1400px;
@@ -70,8 +70,8 @@
 }
 .projectBox img {
   width: 100%;
-  height: 200px;
   object-fit: cover;
+  object-position: center;
 }
 
 .projectBox h1 {
@@ -103,18 +103,16 @@
   background-color: #1f3257;
 }
 .techBox {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 10px;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 .techBox p {
   border: 1px solid #6f7480;
   padding: 6px 10px;
   border-radius: 7px;
-  width: 80px;
+  /* width: 100px; */
   text-align: center;
   color: white;
   font-weight: 700;
@@ -131,9 +129,32 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-@media (max-width:750px) {
-  .projectHeading{
+.gitrepo {
+  font-size: 1.2rem;
+  display: flex;
+  margin-top: 40px;
+  font-weight: 700;
+  color: #832498;
+  cursor: pointer;
+  padding-bottom: 80px;
+}
+.gitrepo p {
+  transition: all 0.3s ease-in-out;
+}
+.gitrepo p:hover {
+  color: #b97ef3;
+  transform: translateY(-10px);
+}
+@media (max-width: 750px) {
+  .projectHeading {
     font-size: 2rem;
   }
-  
+}
+@media (max-width: 500px) {
+  .projectBoxesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .projectHeading {
+    font-size: 2rem;
+  }
 }

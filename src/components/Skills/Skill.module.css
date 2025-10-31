@@ -1,4 +1,4 @@
-*{
+* {
   /* border: 2px solid red; */
 }
 .skillOuterContainer {
@@ -78,7 +78,6 @@
   text-align: center;
   position: relative;
 }
-/* Add these to your existing Skill.module.css */
 
 .skillTextLine {
   position: absolute;
@@ -232,10 +231,7 @@
   .numberText {
     font-size: 16px;
   }
-  .boxes {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 15px;
-  }
+ 
   .skillCalcs {
     font-size: 12px;
   }

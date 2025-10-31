@@ -6,19 +6,19 @@ import Project from "../components/Projectss/Project";
 import Testimonials from "../components/Testimonials/Testimonials";
 import { Contact } from "lucide-react";
 import ScrollDirectionMarquee from "../components/TextMarqueeComp/TextMarquee";
-import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from "locomotive-scroll";
 
 const locomotiveScroll = new LocomotiveScroll();
-
 
 function Home() {
   return (
     <Fragment>
       <Header />
       <Hero />
-      <ScrollDirectionMarquee/>
-      <Skill/>
-      <Project/>
+      <ScrollDirectionMarquee />
+      <Skill />
+      <Project />
+      <Testimonials />
     </Fragment>
   );
 }
