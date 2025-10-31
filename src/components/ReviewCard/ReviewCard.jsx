@@ -5,40 +5,40 @@ import starImg from "../../../public/star.png";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Ayesha Khan",
+    username: "@aysha_2",
+    body: "I absolutely love how simple and smooth the experience was! Everything worked perfectly, and I got exactly what I needed without any hassle. Highly recommended",
+    img: "https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Rohan Mehta",
+    username: "@rohenmehta1",
+    body: "This platform exceeded my expectations. The design is modern, and the process is super easy to follow. I’ll definitely be coming back again!",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/john",
+    name: "Emily Carter",
+    username: "@emilacarter",
+    body: "Amazing service! The attention to detail and customer support really stood out. It felt like everything was built with the user in mind.",
+    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Hamza Qureshi",
+    username: "@hmza123",
+    body: "I was impressed with how quick and responsive everything was. The overall experience felt premium and effortless. Keep up the great work!",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=464",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Jessica Brown",
+    username: "@jessi",
+    body: "Fantastic interface and really intuitive to use. I found what I needed instantly. It’s rare to see something this well put together",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387",
   },
   {
     name: "James",
     username: "@james",
-    body: "Very fast developer! compeleted full webpage only in two days including all the responsive and animation work",
-    img: "https://avatar.vercel.sh/james",
+    body: "This is one of the most reliable services I’ve used recently. Everything works smoothly, and the results are always consistent. Five stars!",
+    img: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
   },
 ];
 
@@ -86,8 +86,8 @@ export function MarqueeDemo() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[rgba(30,34,50)] via-[rgba(30,34,50,0.8)] to-transparent z-10"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[rgba(30,34,50)] via-[rgba(30,34,50,0.8)] to-transparent z-10"></div>
     </div>
   );
 }

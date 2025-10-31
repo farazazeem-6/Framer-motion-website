@@ -1,5 +1,5 @@
 .reviewCardContainer {
-  border: 1px solid #bbb;
+  border: 1px solid #525252;
   border-radius: 20px;
   background-color: rgba(30, 34, 50);
   padding: 15px 30px 15px 15px;
@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 15px;
   height: 300px;
+  margin-bottom: 10px;
 }
 .cardHeader {
   display: flex;
@@ -61,4 +62,33 @@
   font-size: 14px;
   color: white;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .reviewCardContainer {
+    border-radius: 15px;
+    padding: 10px 20px 10px 10px;
+
+    gap: 10px;
+    height: 280px;
+    margin-bottom: 7px;
+  }
+  .cardHeader {
+    gap: 7px;
+  }
+  .cardImage img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cardName {
+    font-size: 14px;
+  }
+
+  .cardDetail {
+    max-width: 150px;
+  }
+  .cardDetail p {
+    font-size: 12px;
+  }
 }
