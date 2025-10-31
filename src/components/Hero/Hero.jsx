@@ -22,7 +22,8 @@ function Hero() {
   }, []);
 
   return (
-    <div className={`relative h-screen w-full ${styles.heroContainer}`}>
+    //here in hero container ,there was a class name 'h-screen'.i remove it to fix too much margin bottom of hero section  issue.
+    <div className={`relative  w-full ${styles.heroContainer}`}>
       <div
         className={cn(
           "absolute inset-0",

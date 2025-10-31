@@ -1,0 +1,139 @@
+.projectsOuterContainer {
+  padding: 20px 8% 20px;
+  background-color: rgba(17, 24, 39);
+  backdrop-filter: blur(10px) brightness(1.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectHeading {
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+}
+.gradText {
+  background: #3f5efb;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.projectText {
+  max-width: 700px;
+  position: relative;
+  padding: 30px 0px;
+}
+.projectText p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.projectText::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 10px;
+  bottom: 10px;
+}
+
+.projectBoxesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.projectBox {
+  display: flex;
+  flex-direction: column;
+  background: #18202f;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.projectBox:hover {
+  transform: translateY(-5px);
+}
+.projectBox img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projectBox h1 {
+  color: #832498;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.projectBox h4 {
+  font-size: 12px;
+  color: #49505f;
+  font-weight: 800;
+}
+.projectData {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projectData p {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0px;
+  color: #6f7480;
+  transition: all 0.3s ease-in-out;
+}
+.techBox p:hover {
+  background-color: #1f3257;
+}
+.techBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.techBox p {
+  border: 1px solid #6f7480;
+  padding: 6px 10px;
+  border-radius: 7px;
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+.demoBtn {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 7px;
+  padding: 10px 20px;
+  background-color: #832498;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+@media (max-width:750px) {
+  .projectHeading{
+    font-size: 2rem;
+  }
+  
+}

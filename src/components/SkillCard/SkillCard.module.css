@@ -1,6 +1,6 @@
 .SkillCardContainer {
   border: 1px solid #7e7e7e;
-  width: 250px;
+  /* width: 250px; */
   padding: 25px 20px;
   border-radius: 15px;
   display: flex;
@@ -12,7 +12,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .SkillCardContainer:hover {
-  transform: translateY(-10px);
+  transform: translateX(-10px);
   z-index: 9000;
   background-color: #1e2f46;
 }
