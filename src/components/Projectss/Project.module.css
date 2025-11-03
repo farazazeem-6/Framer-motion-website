@@ -157,4 +157,7 @@
   .projectHeading {
     font-size: 2rem;
   }
+  .projectText p {
+    font-size: 12px;
+  }
 }

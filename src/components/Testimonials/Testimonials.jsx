@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "../../components/Testimonials/Testimonials.module.css";
 import { AnimatedLine, RevealOnScroll } from "../Skills/Skill";
-import { Marquee } from "../ui/marquee";
 import { MarqueeDemo } from "../ReviewCard/ReviewCard";
 const reviews = [
   {
@@ -43,8 +42,51 @@ const reviews = [
 ];
 
 function Testimonials() {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [result, setResult] = useState("");
+  const [color, setColor] = useState("");
+  const [showToast, setShowToast] = useState(false);
   const firstRow = reviews.slice(0, Math.ceil(reviews.length / 2));
   const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    emailjs
+      .sendForm(
+        "service_hi1re2n", //  EmailJS Service ID
+        "template_4l20rkn", // EmailJS Template ID
+        form.current,
+        "jnwXsPB_umqpi1SeY" // EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          setResult("✅ Message sent successfully!");
+          setColor("#e8f5e8");
+          setIsSending(false);
+          setShowToast(true);
+
+          setTimeout(() => {
+            setShowToast(false);
+          }, 3000);
+        },
+        (error) => {
+          console.log(error.text);
+          setResult("❌ Failed to send message, please try again.");
+          setColor("#ffeaea");
+          setIsSending(false);
+
+          setShowToast(true);
+          setTimeout(() => {
+            setShowToast(false);
+          }, 3000);
+        }
+      );
+  };
 
   return (
     <div className={styles.testimonialOuterContainer}>
@@ -95,7 +137,9 @@ function Testimonials() {
       <MarqueeDemo />
       <div className={styles.testimonialsFooter}>
         <p>Ready to join these satisfied clients?</p>
-        <button className={styles.testimonialbtn}>Start Your Project Today</button>
+        <button className={styles.testimonialbtn}>
+          Start Your Project Today
+        </button>
       </div>
     </div>
   );

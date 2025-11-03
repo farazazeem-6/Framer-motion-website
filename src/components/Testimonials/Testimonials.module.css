@@ -140,18 +140,19 @@
   font-weight: 400;
 }
 .testimonialbtn {
-  border: 1px solid white;
+  border: 1px solid #bbb;
   padding: 14px 35px;
   border-radius: 13px;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in;
-  background: radial-gradient(
-    circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
+  background: linear-gradient(
+    90deg,
+    hsla(286, 48%, 91%, 1) 0%,
+    hsla(340, 65%, 49%, 1) 0%,
+    hsla(263, 58%, 45%, 1) 100%
   );
 }
 .testimonialbtn:hover {
@@ -163,6 +164,9 @@
     grid-template-columns: 1fr 1fr;
     padding: 30px 20px;
   }
+  .testHeading {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -172,10 +176,13 @@
   .skillCalcs {
     font-size: 12px;
   }
-  .testHeading {
-    font-size: 1.7rem;
-  }
   .skillCalcs {
     padding: 10px;
+  }
+  .testInfo p {
+    font-size: 12px;
+  }
+  .testimonialsFooter p{
+    font-size: 14px;
   }
 }

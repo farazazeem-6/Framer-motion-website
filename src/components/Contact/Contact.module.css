@@ -1,0 +1,79 @@
+.contactContainer {
+  background-color: rgba(25, 27, 49);
+  backdrop-filter: blur(10px) brightness(1.1);
+  padding: 20px 8% 20px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.contactTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testHeading {
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+}
+.testText {
+  background: #3f5efb;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.testInfo {
+  max-width: 700px;
+  position: relative;
+  padding: 30px 0px;
+}
+.testInfo p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.testInfo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 10px;
+  bottom: 10px;
+}
+.contactChildContainer {
+  margin-top: 50px;
+}
+
+@media (max-width: 650px) {
+  .contactContainer {
+    padding: 10px 3%;
+  }
+  .testHeading {
+    font-size: 2rem;
+  }
+  .testInfo p {
+    font-size: 12px;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .contactContainer {
+    padding: 10px 1px;
+  }
+  .contactChildContainer {
+    margin-top: 10px;
+  }
+}

@@ -4,9 +4,9 @@ import React, { Fragment } from "react";
 import Skill from "../components/Skills/Skill";
 import Project from "../components/Projectss/Project";
 import Testimonials from "../components/Testimonials/Testimonials";
-import { Contact } from "lucide-react";
 import ScrollDirectionMarquee from "../components/TextMarqueeComp/TextMarquee";
 import LocomotiveScroll from "locomotive-scroll";
+import Contact from "../components/Contact/Contact";
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -19,6 +19,8 @@ function Home() {
       <Skill />
       <Project />
       <Testimonials />
+      <Contact/>
+      
     </Fragment>
   );
 }
