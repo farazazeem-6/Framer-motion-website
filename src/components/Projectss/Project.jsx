@@ -210,7 +210,7 @@ function Project() {
       <div className={styles.gitrepo}>
         <a target="_blank" href="https://github.com/farazazeem-6">
           <p>
-            View More Projects on GitHub <i class="ri-arrow-right-up-line"></i>
+            View More Projects on GitHub <i className="ri-arrow-right-up-line"></i>
           </p>
         </a>
       </div>
