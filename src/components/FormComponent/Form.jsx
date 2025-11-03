@@ -1,28 +1,12 @@
 import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "../FormComponent/Form.module.css";
 
 const ContactSection = () => {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [result, setResult] = useState("");
-  const [color, setColor] = useState("");
   const [showToast, setShowToast] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,7 +14,7 @@ const ContactSection = () => {
 
     emailjs
       .sendForm(
-        "service_hi1re2n", //  EmailJS Service ID
+        "service_hi1re2n", // EmailJS Service ID
         "template_4l20rkn", // EmailJS Template ID
         form.current,
         "jnwXsPB_umqpi1SeY" // EmailJS Public Key
@@ -38,25 +22,25 @@ const ContactSection = () => {
       .then(
         (result) => {
           console.log(result.text);
-          e.target.reset();
+          form.current.reset();
           setResult("✅ Message sent successfully!");
-          setColor("#e8f5e8");
           setIsSending(false);
           setShowToast(true);
 
           setTimeout(() => {
             setShowToast(false);
+            setResult("");
           }, 3000);
         },
         (error) => {
           console.log(error.text);
           setResult("❌ Failed to send message, please try again.");
-          setColor("#ffeaea");
           setIsSending(false);
-
           setShowToast(true);
+
           setTimeout(() => {
             setShowToast(false);
+            setResult("");
           }, 3000);
         }
       );
@@ -70,7 +54,7 @@ const ContactSection = () => {
           Have a project in mind? Let's discuss it!
         </p>
 
-        <div className={styles.form}>
+        <form ref={form} onSubmit={sendEmail} className={styles.form}>
           <div className={styles.inputGroup}>
             <div className={styles.iconPlaceholder}>
               <i className="ri-user-3-line"></i>
@@ -79,9 +63,8 @@ const ContactSection = () => {
               type="text"
               name="name"
               placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
               className={styles.input}
+              required
             />
           </div>
 
@@ -93,9 +76,8 @@ const ContactSection = () => {
               type="email"
               name="email"
               placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
               className={styles.input}
+              required
             />
           </div>
 
@@ -106,18 +88,34 @@ const ContactSection = () => {
             <textarea
               name="message"
               placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
               className={styles.textarea}
               rows="5"
+              required
             />
           </div>
 
-          <button onClick={sendEmail} className={styles.submitButton}>
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={isSending}
+          >
             <span className={styles.buttonDot}></span>
-            Send Message
+            {isSending ? "Sending..." : "Send Message"}
           </button>
-        </div>
+        </form>
+
+        {showToast && (
+          <div style={{
+            marginTop: '1rem',
+            padding: '1rem',
+            borderRadius: '8px',
+            backgroundColor: result.includes('✅') ? '#e8f5e8' : '#ffeaea',
+            color: result.includes('✅') ? '#2e7d32' : '#c62828',
+            textAlign: 'center'
+          }}>
+            {result}
+          </div>
+        )}
       </div>
 
       <div className={styles.rightSection}>
@@ -163,6 +161,7 @@ const ContactSection = () => {
             </div>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/faraz-azeem-45207727b/"
             >
               <div className={styles.contactInfo}>
