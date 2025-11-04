@@ -20,11 +20,9 @@
   --light-color-4: #dcdcdc;
   --light-color-5: #fff5ee;
   --light-color-6: #fafafa;
-  --white-color: #fff;
 
   --header-dark-color: #151c2c;
   --footer-color: #1b1a2e;
-  --purple-color: #4d317b;
   --purple-button-color: rgba(144, 48, 229);
 }
 
@@ -41,19 +39,19 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }

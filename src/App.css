@@ -1,0 +1,89 @@
+:root {
+  /* Primary Background Colors */
+  --header-bg: rgba(21, 28, 44, 0.7);
+  --header-shadow-color: rgba(21, 28, 44, 0.35);
+  --mobile-menu-bg: rgba(21, 28, 44, 0.9);
+  --sidebar-footer-bg: #1f2737;
+  --not-active-btn: rgba(255, 255, 255, 0.1);
+  --hero-body-color: rgba(17, 24, 39);
+  --marquee-color: #111827;
+  --skill-bg: rgb(26, 26, 46);
+  --calc-box: rgb(29, 34, 50);
+  --skill-hover: #1e2f46;
+
+  /* Text Colors */
+  --white-color: #ffffff;
+  --text-secondary: #bfc4ca;
+  --text-muted: #4c3f6c;
+
+  /* Purple/Accent Colors */
+  --purple-color: #7c3aed; /* or your existing purple */
+  --purple-button-color: #7c3aed; /* or your existing purple button */
+
+  /* Gradient Colors */
+  --gradient-blue: rgba(63, 94, 251, 1);
+  --gradient-pink: rgba(252, 70, 107, 1);
+  --gradient-rose: rgb(219, 112, 133);
+  --glow-purple-start: rgba(124, 58, 237, 0.6);
+  --glow-purple-mid: rgba(124, 58, 237, 0.3);
+
+  /* Hover & Interactive States */
+  --hover-overlay: rgba(255, 255, 255, 0.1);
+  --hover-overlay-dark: rgba(94, 92, 92, 0.1);
+
+  /* Border Colors */
+  --border-purple: #4c3f6c;
+  --divider-color: #fffaf0;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --skill-hover: #1e2f46;
+  --calc-box: rgb(29, 34, 50);
+  --header-bg: rgba(21, 28, 44, 0.7);
+  --header-shadow-color: rgba(21, 28, 44, 0.35);
+  --marquee-color: #111827;
+  --mobile-menu-bg: rgba(21, 28, 44, 0.9);
+  --sidebar-footer-bg: #1f2737;
+  --white-color: #ffffff;
+  --text-secondary: #bfc4ca;
+  --text-muted: #4c3f6c;
+  --skill-bg: rgb(26, 26, 46);
+  --purple-color: #7c3aed;
+  --purple-button-color: #7c3aed;
+  --gradient-blue: rgba(63, 94, 251, 1);
+  --gradient-pink: rgba(252, 70, 107, 1);
+  --gradient-rose: rgb(219, 112, 133);
+  --glow-purple-start: rgba(124, 58, 237, 0.6);
+  --glow-purple-mid: rgba(124, 58, 237, 0.3);
+  --hover-overlay: rgba(255, 255, 255, 0.1);
+  --hover-overlay-dark: rgba(94, 92, 92, 0.1);
+  --border-purple: #4c3f6c;
+  --divider-color: #fffaf0;
+}
+
+[data-theme="light"] {
+  --skill-hover: #f8f5f5;
+  --calc-box: #ffffff;
+  --hero-body-color: #fff;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-shadow-color: rgba(0, 0, 0, 0.1);
+  --mobile-menu-bg: rgba(255, 255, 255, 0.95);
+  --sidebar-footer-bg: #f8f9fa;
+  --white-color: #000000;
+  --marquee-color: #ffffff;
+  --skill-bg: rgba(248, 240, 241);
+  --text-secondary: #4a5568;
+  --text-muted: #cbd5e0;
+  --purple-color: #fac4c4;
+  --purple-button-color: #d22323;
+  --gradient-blue: #e53935;
+  --gradient-pink: #f57c00;
+  --gradient-rose: rgb(219, 112, 133);
+  --glow-purple-start: rgba(124, 58, 237, 0.6);
+  --glow-purple-mid: rgba(124, 58, 237, 0.3);
+  --hover-overlay: rgba(0, 0, 0, 0.05);
+  --hover-overlay-dark: rgba(0, 0, 0, 0.08);
+  --border-purple: #e2e8f0;
+  --divider-color: #e2e8f0;
+}

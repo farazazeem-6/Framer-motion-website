@@ -7,14 +7,14 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  background-color: rgba(29, 34, 50);
+  background-color: var(--calc-box);
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .SkillCardContainer:hover {
   transform: translateX(-10px);
   z-index: 9000;
-  background-color: #1e2f46;
+  background-color: var(--skill-hover);
 }
 
 .skillIcon img {
@@ -25,6 +25,6 @@
   border-radius: 10px;
 }
 .skillName p {
-  color: white;
+  color: var(--white-color);
   font-weight: 800;
 }

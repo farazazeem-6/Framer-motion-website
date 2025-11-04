@@ -1,7 +1,7 @@
 .marqueeWrapper {
-  background-color: #111827;
+  background-color: var(--marquee-color);
   font-size: 4.5rem;
-  color: white;
+  color: var(--white-color);
   font-weight: 800;
   letter-spacing: 20px;
   padding: 0px 20px 100px;

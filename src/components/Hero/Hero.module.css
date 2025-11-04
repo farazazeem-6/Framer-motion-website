@@ -1,7 +1,7 @@
 .heroContainer {
   /* background-color: var(--dark-color-1); */
   /* background-color: #111827; */
-  background-color: rgba(17, 24, 39);
+  background-color: var(--hero-body-color);
   backdrop-filter: blur(100px);
 }
 .heroInnerContainer {
@@ -15,7 +15,7 @@
   max-width: 700px;
 }
 .heroTextCont h1 {
-  color: white;
+  color: var(--white-color);
   font-size: 3.8rem;
   font-weight: 800;
 }
@@ -23,20 +23,20 @@
   margin-left: 15px;
   font-size: 1.6rem;
   font-weight: 800;
-  color: #9b27af;
+  color: var(--purple-button-color);
 }
 .dot {
-  color: #9b27af;
+  color: var(--purple-button-color);
 }
 .heroTextCont h3 {
-  color: white;
+  color: var(--white-color);
   font-size: 1.3rem;
   font-weight: 650;
   margin-top: 10px;
   margin-bottom: 30px;
 }
 .heroTextCont p {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2rem;
@@ -53,7 +53,7 @@
 /* custom button css  */
 .resumeBtn {
   align-self: center;
-  background-color: #fff;
+  background-color: white;
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
@@ -105,13 +105,13 @@
   font-weight: 800;
 }
 .heroImgCont img:hover {
-  border-color: #c52929;
+  border-color: var(--purple-button-color);
 }
 .heroImgCont img {
   /* width: 100%; */
   width: 500px;
   border-radius: 50%;
-  border: 10px solid #9b27af;
+  border: 10px solid var(--purple-button-color);
   transition: all 0.3s ease-in-out;
   animation: float 3s ease-in-out infinite;
 }
