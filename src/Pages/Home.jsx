@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import ScrollDirectionMarquee from "../components/TextMarqueeComp/TextMarquee";
 import LocomotiveScroll from "locomotive-scroll";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -20,6 +21,7 @@ function Home() {
       <Project />
       <Testimonials />
       <Contact/>
+    
       
     </Fragment>
   );

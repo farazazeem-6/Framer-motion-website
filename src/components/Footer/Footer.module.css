@@ -1,0 +1,320 @@
+.footer {
+  background-color: #1a1d2e;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  gap: 60px;
+  padding: 20px 8% 20px;
+  border-bottom: 1px solid rgba(138, 138, 138, 0.1);
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profileImage img {
+  width: 60px;
+  height: 70px;
+  border-radius: 46%;
+  background-color: #2d3250;
+  border: 3px solid #7c3aed;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 00;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.profileTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  color: #796898;
+}
+
+.profileDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b0b0c0;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  background-color: #1e2232;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 6px 10px;
+  color: #b0b0c0;
+  font-weight: 100;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialIcon:hover {
+  transform: translateY(-3px);
+}
+.githubIcon:hover {
+  color: #754cbd;
+  transform: rotate(10deg);
+}
+.linkedinIcon:hover {
+  color: rgb(61, 82, 204);
+  transform: rotate(10deg);
+}
+.tiktokIcon:hover {
+  color: rgb(199, 76, 96);
+  transform: rotate(10deg);
+}
+.facebookIcon:hover {
+  color: rgb(61, 82, 204);
+  transform: rotate(10deg);
+}
+.whatsappIcon:hover {
+  color: rgb(104, 211, 104);
+  transform: rotate(10deg);
+}
+
+/* Links Section */
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: #b0b0c0;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+/* Contact Section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  background-color: #3b2859;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 5px 8px;
+  color: #7c55a9;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactLabel {
+  font-size: 13px;
+  color: #a0a0b0;
+  margin: 0;
+  font-weight: 600;
+}
+
+.contactValue {
+  font-size: 14px;
+  color: #a0a0b0;
+  margin: 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.contactValue:hover {
+  color: white;
+}
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ctaDescription {
+  font-size: 14px;
+  /* line-height: 1.7; */
+  color: #b0b0c0;
+  margin: 0;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%);
+  color: #ffffff;
+  border: none;
+  padding: 8px 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+.backToTop {
+  background-color: transparent;
+  color: #b0b0c0;
+  border: 1px solid #2d3250;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.backToTop:hover {
+  background-color: rgba(138, 138, 138, 0.1);
+}
+
+.backToTopIcon {
+  font-size: 16px;
+}
+.footerBottom {
+  padding: 10px 8% 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #b0b0c0;
+  font-weight: 500;
+}
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.right {
+  display: flex;
+  gap: 5px;
+}
+.right i {
+  color: #754cbd;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer {
+    padding: 20px 20px 10px;
+  }
+  .footerBottom {
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 10px 2% 0px;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    display: flex;
+  }
+  .hide {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .right {
+    flex-direction: column;
+  }
+}
