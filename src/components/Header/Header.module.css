@@ -4,8 +4,9 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 .Header {
-  background-color: rgb(21, 28, 44, 0.7);
+  background-color: var(--header-bg);
   backdrop-filter: blur(10px) brightness(1.1);
   z-index: 100;
   padding: 10px 5%;
@@ -16,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
+  box-shadow: var(--header-shadow-color) 20px 5px 15px;
 }
 
 /* header css for full screen  */
@@ -44,8 +45,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgb(219, 112, 133) 100%
+    var(--gradient-blue) 0%,
+    var(--gradient-rose) 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -85,11 +86,12 @@
   font-size: 14px;
   transition: all 0.3s ease;
 }
+
 .firstName:hover {
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
+    var(--gradient-blue) 0%,
+    var(--gradient-pink) 100%
   );
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -105,18 +107,20 @@
 .mobileScreen {
   display: none;
 }
+
 .hamburgerBtn {
-  color: #bfc4ca;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 3px 5px;
   border-radius: 10px;
   display: none;
 }
+
 .hamburgerBtn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--hover-overlay);
   backdrop-filter: blur(10px) brightness(1.1);
-  color: white;
+  color: var(--white-color);
 }
 
 /* //mobile css */
@@ -129,31 +133,35 @@
   max-width: 350px;
   height: calc(var(--vh, 1vh) * 100);
   background: var(--bg-color, #fff);
-  box-shadow: rgba(21, 28, 44, 0.35) 20px 5px 15px;
+  box-shadow: var(--header-shadow-color) 20px 5px 15px;
   transition: height 0.3s ease-in-out, right 0.3s ease-in-out;
   z-index: 19999;
   display: flex;
   flex-direction: column;
-  border-left: 0.5px solid #4c3f6c;
-  background-color: rgba(21, 28, 44, 0.9);
+  border-left: 0.5px solid var(--border-purple);
+  background-color: var(--mobile-menu-bg);
   backdrop-filter: blur(10px) brightness(1.1);
   justify-content: space-between;
 }
+
 .mobileMenu.active {
   right: 0;
 }
+
 .mobileMenuNavButtons {
   margin-top: 20px;
   padding: 0px 10px 30px 10px;
 }
+
 .mobileMenuNavButtons ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-size: 14px;
-  color: #bfc4ca;
+  color: var(--text-secondary);
   font-weight: 600;
 }
+
 .mobileMenuNavButtons ul li {
   cursor: pointer;
   padding: 14px 15px;
@@ -161,14 +169,17 @@
   transition: all 0.3s ease;
   border-radius: 14px;
 }
+
 .mobileMenuNavButtons ul li:hover {
   transform: scaleY(1.1);
 }
+
 .mobileMenuNavButtons ul li:not(.activeLink li):hover {
-  background-color: rgba(94, 92, 92, 0.1);
+  background-color: var(--hover-overlay-dark);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: var(--white-color);
 }
+
 .activeLink li {
   background-color: var(--purple-button-color);
   color: white;
@@ -185,33 +196,36 @@
   height: 30px;
   background: linear-gradient(
     to bottom,
-    rgba(124, 58, 237, 0.6) 0%,
-    rgba(124, 58, 237, 0.3) 50%,
+    var(--glow-purple-start) 0%,
+    var(--glow-purple-mid) 50%,
     transparent 100%
   );
   filter: blur(15px);
   z-index: -1;
   pointer-events: none;
 }
+
 .closeMenuBtn {
-  color: #bfc4ca;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 3px 5px;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
 }
+
 .closeMenuBtn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--hover-overlay);
   backdrop-filter: blur(10px) brightness(1.1);
-  color: white;
+  color: var(--white-color);
   transform: rotate(90deg);
 }
 
 .sideBarFooter {
   padding: 20px 10px 30px 20px;
-  background-color: #1f2737;
+  background-color: var(--sidebar-footer-bg);
   backdrop-filter: blur(10px);
 }
+
 .getInTouchBtn {
   color: white;
   background-color: var(--purple-button-color);
@@ -224,12 +238,15 @@
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
+
 .getInTouchBtn:hover {
   transform: scale(1.1);
 }
+
 .getInTouchBtn i {
   margin-left: 6px;
 }
+
 .getInTouchBtn::after {
   content: "";
   position: absolute;
@@ -240,8 +257,8 @@
   height: 30px;
   background: linear-gradient(
     to bottom,
-    rgba(124, 58, 237, 0.6) 0%,
-    rgba(124, 58, 237, 0.3) 50%,
+    var(--glow-purple-start) 0%,
+    var(--glow-purple-mid) 50%,
     transparent 100%
   );
   filter: blur(15px);
@@ -256,17 +273,19 @@
   gap: 15px;
   margin-top: 10px;
 }
+
 .socialIcon a {
-  color: #bfc4ca;
+  color: var(--text-secondary);
   font-size: 20px;
   padding: 6px 10px;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
 }
+
 .socialIcon a:hover {
-  background-color: rgba(94, 92, 92, 0.1);
+  background-color: var(--hover-overlay-dark);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: var(--white-color);
   transform: scale(1.1) rotate(10deg);
 }
 
@@ -277,11 +296,13 @@
   justify-content: space-between;
   padding: 20px 20px 10px;
 }
+
 .horizontalLine {
-  color: #fffaf0;
+  color: var(--divider-color);
   opacity: 0.1;
   margin-top: 10px;
 }
+
 .mobileLogo {
   display: flex;
   align-items: center;
@@ -306,8 +327,8 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgb(219, 112, 133) 100%
+    var(--gradient-blue) 0%,
+    var(--gradient-rose) 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -347,11 +368,12 @@
   font-size: 16px;
   transition: all 0.3s ease;
 }
+
 .mobileFirstName:hover {
   background: radial-gradient(
     circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
+    var(--gradient-blue) 0%,
+    var(--gradient-pink) 100%
   );
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -382,6 +404,7 @@
     display: none;
   }
 }
+
 @media (max-width: 650px) {
   .logoSectionCont {
     padding: 10px 15px 5px;
@@ -396,7 +419,7 @@
   }
   .mobileInfoText {
     font-size: 14px;
-    color: #4c3f6c;
+    color: var(--text-muted);
     font-weight: 500;
   }
   .mobileFirstName {
@@ -431,7 +454,7 @@
   }
   .sideBarFooter {
     padding: 20px 10px 30px 20px;
-    border-top: 1px solid #4c3f6c;
+    border-top: 1px solid var(--border-purple);
   }
   .getInTouchBtn {
     padding: 12px 18px;
