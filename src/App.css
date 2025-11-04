@@ -10,6 +10,11 @@
   --skill-bg: rgb(26, 26, 46);
   --calc-box: rgb(29, 34, 50);
   --skill-hover: #1e2f46;
+  --project-box: #18202f;
+  --test-card: rgb(30, 34, 50);
+  --form-color: rgb(43, 49, 66);
+  --contact-icon: #382958;
+  --footer-color: #1a1d2e;
 
   /* Text Colors */
   --white-color: #ffffff;
@@ -38,6 +43,11 @@
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
+  --footer-color: #1a1d2e;
+  --contact-icon: #382958;
+  --form-color: rgb(43, 49, 66);
+  --test-card: rgb(30, 34, 50);
+  --project-box: #18202f;
   --skill-hover: #1e2f46;
   --calc-box: rgb(29, 34, 50);
   --header-bg: rgba(21, 28, 44, 0.7);
@@ -63,6 +73,12 @@
 }
 
 [data-theme="light"] {
+  --footer-color: #1c1b26;
+  --contact-icon: #f0d6d3;
+  --form-color: #f8f7f7;
+  --not-active-btn: rgba(44, 42, 42, 0.1);
+  --test-card: #ffffff;
+  --project-box: #ffffff;
   --skill-hover: #f8f5f5;
   --calc-box: #ffffff;
   --hero-body-color: #fff;

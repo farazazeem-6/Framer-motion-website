@@ -39,7 +39,7 @@ const CTASection = () => {
           border:1px solid rgba(255, 255, 255, 0.1);
           margin-top:50px;
           border-radius:30px;
-           background-color: rgba(29, 34, 51);
+           background-color: var( --test-card);
         }
 
         .${styles.content} {
@@ -50,7 +50,7 @@ const CTASection = () => {
         .${styles.heading} {
           font-size: 1.4rem;
           font-weight: 900;
-          color: #ffffff;
+          color: var(--white-color);
           margin: 0 0 1.5rem 0;
           line-height: 1;
         }
@@ -91,15 +91,14 @@ const CTASection = () => {
         }
 
         .${styles.emailButton} {
-          background: rgba(255, 255, 255, 0.1);
-          color: #ffffff;
+          background: var(--not-active-btn);
+          color: var(--white-color);
           border-radius: 16px;
           padding: 11px 25px;
           font-size: 16px;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.3s ease;
-          background: rgba(255, 255, 255, 0.15);
           border-color: rgba(255, 255, 255, 0.3);
           transform: translateY(-2px);
           box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);

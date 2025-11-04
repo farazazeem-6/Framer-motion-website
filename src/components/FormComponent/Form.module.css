@@ -11,13 +11,13 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 30px 25px 10px;
-  background-color: rgba(29, 34, 51);
+  background-color: var(--calc-box);
 }
 
 .title {
   font-size: 1.7rem;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--white-color);
   margin: 0 0 0.5rem 0;
 }
 
@@ -38,7 +38,7 @@
   position: relative;
   display: flex;
   /* align-items: center; */
-  background: rgba(43, 49, 66);
+  background: var(--form-color);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 4px 1.25rem;
@@ -52,7 +52,7 @@
   border-radius: 4px;
   margin-right: 1rem;
   flex-shrink: 0;
-  color: #858282;
+  color: var(--text-secondary);
   font-size: 18px;
   font-weight: 800;
   transition: all 0.3s ease-in-out;
@@ -64,14 +64,14 @@
   background: transparent;
   border: none;
   outline: none;
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 15px;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
 }
 .iconPlaceholder:hover {
   transform: scale(1.1);
-  color: #8b5cf6;
+  color: var(--purple-button-color);
 }
 
 .input::placeholder,
@@ -89,7 +89,11 @@
   align-items: center;
   /* justify-content: center; */
   gap: 0.75rem;
-  background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%);
+  background: linear-gradient(
+    90deg,
+    var(--gradient-blue) 0%,
+    var(--gradient-pink) 100%
+  );
   color: #ffffff;
   border: none;
   border-radius: 12px;
@@ -122,18 +126,18 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background-color: rgba(29, 34, 51);
+  background-color: var(--calc-box);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 15px 20px;
 }
 
 .contactIcon {
-  background-color: #382958;
+  background-color: var(--contact-icon);
   border-radius: 12px;
   flex-shrink: 0;
   font-size: 1.5rem;
-  color: #7853a5;
+  color: var(--purple-button-color);
   padding: 6px 12px;
 }
 
@@ -151,7 +155,7 @@
 .contactValue {
   font-size: 16px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 @media (max-width: 968px) {

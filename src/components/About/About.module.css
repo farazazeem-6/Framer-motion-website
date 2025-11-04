@@ -20,7 +20,8 @@
   border: 1px solid #333;
   padding: 8px 20px;
   border-radius: 20px;
-  background-color: rgb(29, 34, 50);
+  background-color: var(--calc-box);
+  color: var(--white-color);
 }
 @media (max-width: 950px) {
   .aboutData {

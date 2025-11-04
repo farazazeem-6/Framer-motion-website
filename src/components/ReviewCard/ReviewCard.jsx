@@ -2,6 +2,7 @@ import { cn } from "../../lib/utils";
 import { Marquee } from "../../components/ui/marquee";
 import styles from "../ReviewCard/ReviewCard.module.css";
 import starImg from "../../../public/star.png";
+import { useSelector } from "react-redux";
 
 const reviews = [
   {
@@ -74,6 +75,8 @@ const ReviewCard = ({ img, name, username, body }) => {
 };
 
 export function MarqueeDemo() {
+  const theme = useSelector((state) => state.theme.mode);
+
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:20s]">
@@ -86,8 +89,21 @@ export function MarqueeDemo() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[rgba(30,34,50)] via-[rgba(30,34,50,0.8)] to-transparent z-10"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[rgba(30,34,50)] via-[rgba(30,34,50,0.8)] to-transparent z-10"></div>
+      <div
+        className={`pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r z-10 ${
+          theme === "light"
+            ? "from-[rgba(255,255,255,1)] via-[rgba(255,255,255,0.8)] to-transparent"
+            : "from-[rgba(30,34,50,1)] via-[rgba(30,34,50,0.8)] to-transparent"
+        }`}
+      />
+
+      <div
+        className={`pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l z-10 ${
+          theme === "light"
+            ? "from-[rgba(255,255,255,1)] via-[rgba(255,255,255,0.8)] to-transparent"
+            : "from-[rgba(30,34,50,1)] via-[rgba(30,34,50,0.8)] to-transparent"
+        }`}
+      />
     </div>
   );
 }
