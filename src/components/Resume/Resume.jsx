@@ -1,6 +1,10 @@
 import styles from "../Resume/Resume.module.css";
 import { RevealOnScroll } from "../Skills/Skill";
 import ResumeImg from "../../../public/resume.jpg";
+
+const handleEmailClick = () => {
+  window.location.href = "mailto:farazazeem66@gmail.com";
+};
 function Resume() {
   return (
     <div className={styles.resumeContainer}>
@@ -71,7 +75,10 @@ function Resume() {
           <div className={styles.connectBox}>
             <div className={styles.connectBoxdata}>
               <p>Interested in working together?</p>
-              <button className={`${styles.resumeBtn} ${styles.connectBtn}`}>
+              <button
+                onClick={handleEmailClick}
+                className={`${styles.resumeBtn} ${styles.connectBtn}`}
+              >
                 Lets's Connect <i class="ri-share-box-line"></i>
               </button>
             </div>
