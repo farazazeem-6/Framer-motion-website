@@ -11,6 +11,7 @@ import PageWrapper from "./components/PageWrapper/PageWrapper";
 import Contact from "./components/Contact/Contact";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import Resume from "./components/Resume/Resume";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <PageWrapper>
             <Contact />
+          </PageWrapper>
+        ),
+      },
+      {
+        path: "resume",
+        element: (
+          <PageWrapper>
+            <Resume />
           </PageWrapper>
         ),
       },

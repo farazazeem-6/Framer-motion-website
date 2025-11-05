@@ -3,7 +3,7 @@ import React from "react";
 function PageWrapper({ children }) {
   const pageWrapper = {
     paddingTop: "160px",
-    backgroundColor: "var(--mobile-menu-bg)",
+    backgroundColor: "var( --wrapper-color)",
   };
   return <div style={pageWrapper}>{children}</div>;
 }
