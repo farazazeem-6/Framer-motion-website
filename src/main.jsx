@@ -49,9 +49,7 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: (
-          <PageWrapper>
             <Contact />
-          </PageWrapper>
         ),
       },
       {
