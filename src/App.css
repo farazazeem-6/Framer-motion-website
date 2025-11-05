@@ -15,6 +15,9 @@
   --form-color: rgb(43, 49, 66);
   --contact-icon: #382958;
   --footer-color: #1a1d2e;
+  --wrapper-color: #111827;
+  --resume-btn: rgba(31, 41, 55);
+  --resume-box: rgba(28, 30, 48);
 
   /* Text Colors */
   --white-color: #ffffff;
@@ -43,6 +46,9 @@
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
+  --resume-box: rgba(28, 30, 48);
+  --resume-btn: rgba(31, 41, 55);
+  --wrapper-color: #111827;
   --footer-color: #1a1d2e;
   --contact-icon: #382958;
   --form-color: rgb(43, 49, 66);
@@ -73,6 +79,9 @@
 }
 
 [data-theme="light"] {
+  --resume-box: #fff;
+  --resume-btn: #ffffff;
+  --wrapper-color: #ffffff;
   --footer-color: #1c1b26;
   --contact-icon: #f0d6d3;
   --form-color: #f8f7f7;

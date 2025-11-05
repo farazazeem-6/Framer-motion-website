@@ -6,26 +6,6 @@
 
 /* @custom-variant dark (&:is(.dark *)); */
 
-:root {
-  --dark-color-1: #151922;
-  --dark-color-2: #0d0907;
-  --dark-color-3: #252321;
-  --dark-color-4: #4d423e;
-  --dark-color-5: #323441;
-  --dark-color: #000;
-
-  --light-color-1: #fbfbfb;
-  --light-color-2: #fffff0;
-  --light-color-3: #f0f8ff;
-  --light-color-4: #dcdcdc;
-  --light-color-5: #fff5ee;
-  --light-color-6: #fafafa;
-
-  --header-dark-color: #151c2c;
-  --footer-color: #1b1a2e;
-  --purple-button-color: rgba(144, 48, 229);
-}
-
 /* @layer base {
   * {
     @apply border-border outline-ring/50;

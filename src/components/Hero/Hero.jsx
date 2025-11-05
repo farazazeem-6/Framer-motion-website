@@ -3,6 +3,7 @@ import styles from "../../components/Hero/Hero.module.css";
 import { cn } from "../../lib/utils";
 import Header from "../Header/Header";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const TEXTS = [
   "Frontend Developer",
@@ -12,6 +13,7 @@ const TEXTS = [
 ];
 
 function Hero() {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ function Hero() {
             MERN Stack, TypeScript, React, Redux Toolkit, GSAP, Tailwind CSS,
             BootStrap, React Hook Form, and Framer Motion.
           </p>
-          <button className={styles.resumeBtn} role="button">
+          <button onClick={()=>navigate('/resume')} className={styles.resumeBtn} role="button">
             Explore Resume
           </button>
         </div>
