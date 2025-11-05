@@ -5,13 +5,14 @@ import React, { Fragment, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import { useSelector } from "react-redux";
-import '../../src/App.css'
+import "../../src/App.css";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import WhatsappBtn from "../components/WhatsappButton/WhatsappBtn";
 
 function Layout() {
   const theme = useSelector((state) => state.theme.mode);
 
   useEffect(() => {
-    // Apply theme to document
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
@@ -22,6 +23,8 @@ function Layout() {
       <PageWrapper>
         <Footer />
       </PageWrapper>
+      <WhatsappBtn />
+      <ScrollToTop />
     </Fragment>
   );
 }

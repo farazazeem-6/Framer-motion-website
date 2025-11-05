@@ -2,6 +2,14 @@ import React from "react";
 import styles from "../Footer/Footer.module.css";
 import { useNavigate } from "react-router-dom";
 
+
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // This makes it smooth scroll
+  });
+};
 const Footer = () => {
   const navigate = useNavigate();
   return (
@@ -131,7 +139,7 @@ const Footer = () => {
             and create something extraordinary.
           </p>
           <button className={styles.ctaButton}>Start a Project</button>
-          <button className={styles.backToTop}>
+          <button onClick={scrollToTop} className={styles.backToTop}>
             <span className={styles.backToTopIcon}>↑</span>
             Back to Top
           </button>

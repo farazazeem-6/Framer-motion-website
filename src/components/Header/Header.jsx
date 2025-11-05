@@ -5,7 +5,7 @@ import ThemeButton from "./ThemeButton/ThemeButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 
@@ -18,6 +18,7 @@ window.addEventListener("orientationchange", setRealVh);
 setRealVh();
 
 function Header() {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -154,21 +155,27 @@ function Header() {
         </div>
 
         <div className={styles.sideBarFooter}>
-          <button className={styles.getInTouchBtn}>
+          <button
+            onClick={() => navigate("/contact")}
+            className={styles.getInTouchBtn}
+          >
             Get in touch
             <i className="ri-external-link-line"></i>
           </button>
           <div className={styles.socialIcon}>
-            <a href="">
+            <a target="_blank" href="https://github.com/farazazeem-6">
               <i className="ri-github-line"></i>
             </a>
-            <a href="">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/faraz-azeem-45207727b/"
+            >
               <i className="ri-linkedin-line"></i>
             </a>
-            <a href="">
+            <a target="_blank" href="https://www.instagram.com/faraz_dhillon6/">
               <i className="ri-instagram-line"></i>
             </a>
-            <a href="">
+            <a target="_blank" href="https://wa.me/923098495478">
               <i className="ri-tiktok-fill"></i>
             </a>
           </div>
