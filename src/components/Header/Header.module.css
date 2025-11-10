@@ -7,9 +7,9 @@
 
 .Header {
   background-color: var(--header-bg);
-  backdrop-filter: blur(10px) brightness(1.1);
+  /* backdrop-filter: blur(10px) brightness(1.1); */
   z-index: 100;
-  padding: 10px 5%;
+  padding: 20px 5%;
   position: fixed;
   left: 0;
   right: 0;
@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: var(--header-shadow-color) 20px 5px 15px;
+  /* box-shadow: var(--header-shadow-color) 20px 5px 15px; */
 }
 
 /* header css for full screen  */

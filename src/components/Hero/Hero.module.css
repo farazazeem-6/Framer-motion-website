@@ -18,6 +18,8 @@
   color: var(--white-color);
   font-size: 3.8rem;
   font-weight: 800;
+  /* color: #d4d4d4; */
+  /* color: #404040; */
 }
 .motionText {
   margin-left: 15px;
@@ -114,6 +116,7 @@
   border: 10px solid var(--purple-button-color);
   transition: all 0.3s ease-in-out;
   animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* floating label css  */

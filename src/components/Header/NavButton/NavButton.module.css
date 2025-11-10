@@ -16,7 +16,8 @@
 .navButtons ul li:not(.activeLink li):hover {
   background-color: var(--not-active-btn);
   backdrop-filter: blur(10px) brightness(1.1);
-  color: #fff;
+  color: var(--white-color);
+  /* color: black; */
 }
 .activeLink li {
   background-color: var(--purple-button-color);
@@ -27,17 +28,18 @@
 .activeLink li::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  height: 30px;
-  background: linear-gradient(
+  width: 80%;
+  height: 7px;
+  /* background: linear-gradient(
     to bottom,
     var(--glow-purple-start) 0%,
     var(--glow-purple-mid) 50%,
-    transparent 100%
-  );
+    transparent 30%
+  ); */
+  background: var(--purple-button-color);
   filter: blur(15px);
   z-index: -1;
   pointer-events: none;
