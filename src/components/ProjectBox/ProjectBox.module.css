@@ -1,0 +1,115 @@
+.projectBox {
+  display: flex;
+  flex-direction: column;
+  background: var(--project-box);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--hover-overlay);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.projectBox:hover {
+  transform: translateY(-5px);
+  border: 1px solid var(--project-box-border);
+}
+
+.projectBox img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 200px;
+}
+
+.projectBox h1 {
+  color: var(--purple-button-color);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.carouselDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expandBtn {
+  font-size: 12px;
+  color: var(--purple-button-color);
+  display: flex;
+  gap: 3px;
+  font-weight: 900;
+  align-items: center;
+  cursor: pointer;
+  padding: 3px 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.expandBtn:hover {
+  background-color: var(--expand-btn-hover);
+}
+
+.projectBox h4 {
+  font-size: 12px;
+  color: #49505f;
+  font-weight: 800;
+}
+
+.projectData {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projectData p {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0px;
+  color: #6f7480;
+  line-height: 1.6;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.projectData p.collapsed {
+  max-height: 80px;
+}
+
+.techBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.techBox p {
+  border: 1px solid #6f7480;
+  padding: 6px 10px;
+  border-radius: 7px;
+  text-align: center;
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.demoBtn {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 7px;
+  padding: 10px 20px;
+  background-color: var(--purple-button-color);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.demoBtn:hover {
+  opacity: 0.9;
+}
