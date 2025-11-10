@@ -24,14 +24,14 @@ function Hero() {
   }, []);
 
   return (
-    //here in hero container ,there was a class name 'h-screen'.i remove it to fix too much margin bottom of hero section  issue.
+    //here in hero container ,there was a class name 'h-screen'.I remove it to fix too much margin bottom of hero section  issue.
     <div className={`relative  w-full ${styles.heroContainer}`}>
       <div
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
           "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "dark:[background-image:radial-gradient(rgba(212,212,212,0.2)_1px,transparent_.8px)]"
         )}
       />
 
@@ -75,7 +75,11 @@ function Hero() {
             MERN Stack, TypeScript, React, Redux Toolkit, GSAP, Tailwind CSS,
             BootStrap, React Hook Form, and Framer Motion.
           </p>
-          <button onClick={()=>navigate('/resume')} className={styles.resumeBtn} role="button">
+          <button
+            onClick={() => navigate("/resume")}
+            className={styles.resumeBtn}
+            role="button"
+          >
             Explore Resume
           </button>
         </div>
