@@ -51,91 +51,21 @@
 .projectBoxesContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: start;
   gap: 20px;
   padding: 20px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-}
-.projectBox {
-  display: flex;
-  flex-direction: column;
-  background: var(--project-box);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-.projectBox:hover {
-  transform: translateY(-5px);
-}
-.projectBox img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
+  /* transition: all 0.3s ease; */
 }
 
-.projectBox h1 {
-  color: var(--purple-button-color);
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.projectBox h4 {
-  font-size: 12px;
-  color: #49505f;
-  font-weight: 800;
-}
-.projectData {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.projectData p {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 10px 0px;
-  color: #6f7480;
-  transition: all 0.3s ease-in-out;
-}
-.techBox p:hover {
-  /* background-color: #1f3257; */
-}
-.techBox {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-.techBox p {
-  border: 1px solid #6f7480;
-  padding: 6px 10px;
-  border-radius: 7px;
-  /* width: 100px; */
-  text-align: center;
-  color: var(--white-color);
-  font-weight: 700;
-}
-.demoBtn {
-  color: white;
-  font-size: 12px;
-  font-weight: 800;
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 7px;
-  padding: 10px 20px;
-  background-color: var(--purple-button-color);
-  margin-bottom: 10px;
-  cursor: pointer;
-}
 .gitrepo {
   font-size: 1.2rem;
   display: flex;
   margin-top: 40px;
   font-weight: 700;
-   color: var(--purple-button-color);
+  color: var(--purple-button-color);
   cursor: pointer;
   padding-bottom: 80px;
 }

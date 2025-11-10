@@ -59,9 +59,9 @@ function Header() {
                 fontSize="inherit"
                 sx={{
                   fontSize: {
-                    xs: "16px", // Small screen
-                    sm: "18px",
-                    md: "22px", // Medium and up
+                    xs: "20px",
+                    sm: "22px",
+                    md: "26px", 
                   },
                   color: "inherit",
                 }}
@@ -97,9 +97,9 @@ function Header() {
                 fontSize="inherit"
                 sx={{
                   fontSize: {
-                    xs: "16px", // Small screen
-                    sm: "18px",
-                    md: "22px", // Medium and up
+                    xs: "20px", 
+                    sm: "22px",
+                    md: "26px", 
                   },
                   color: "inherit",
                 }}

@@ -1,5 +1,6 @@
 :root {
   /* Primary Background Colors */
+  --expand-btn-hover:#2b2d31;
   --header-bg: rgba(21, 28, 44, 0.7);
   --header-shadow-color: rgba(21, 28, 44, 0.35);
   --mobile-menu-bg: rgba(21, 28, 44, 0.9);
@@ -42,10 +43,13 @@
   /* Border Colors */
   --border-purple: #4c3f6c;
   --divider-color: #fffaf0;
+
 }
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
+  --expand-btn-hover:#2b2d31;
+  --project-box-border: #9c27b0;
   --resume-box: rgba(28, 30, 48);
   --resume-btn: rgba(31, 41, 55);
   --wrapper-color: #111827;
@@ -79,6 +83,8 @@
 }
 
 [data-theme="light"] {
+  --expand-btn-hover:#ccc;
+  --project-box-border: #e53935;
   --resume-box: #fff;
   --resume-btn: #ffffff;
   --wrapper-color: #ffffff;
