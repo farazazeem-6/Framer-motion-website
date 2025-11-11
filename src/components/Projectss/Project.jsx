@@ -91,7 +91,7 @@ function Project() {
       </RevealOnScroll>
       <div className={styles.projectBoxesContainer}>
         {projects.map((proj) => (
-          <ProjectBox key={proj.id} data={proj}/>
+          <ProjectBox key={proj.id} data={proj} />
         ))}
       </div>
       <div className={styles.gitrepo}>

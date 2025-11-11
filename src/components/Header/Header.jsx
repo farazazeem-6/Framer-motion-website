@@ -17,7 +17,8 @@ window.addEventListener("resize", setRealVh);
 window.addEventListener("orientationchange", setRealVh);
 setRealVh();
 
-function Header() {
+function Header({ onLogoClick }) {
+
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   function toggleMenu() {
@@ -61,7 +62,7 @@ function Header() {
                   fontSize: {
                     xs: "20px",
                     sm: "22px",
-                    md: "26px", 
+                    md: "26px",
                   },
                   color: "inherit",
                 }}
@@ -97,9 +98,9 @@ function Header() {
                 fontSize="inherit"
                 sx={{
                   fontSize: {
-                    xs: "20px", 
+                    xs: "20px",
                     sm: "22px",
-                    md: "26px", 
+                    md: "26px",
                   },
                   color: "inherit",
                 }}
