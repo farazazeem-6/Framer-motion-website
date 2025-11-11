@@ -1,0 +1,97 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modalData {
+  padding: 40px 50px;
+  background: var(--modal-bg);
+  border-radius: 20px;
+  position: relative;
+}
+.crossBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 4px 6px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.crossBtn i{
+    color: var(--white-color);
+}
+.crossBtn:hover {
+  transform: translateY(-5px);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.profileInner img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 6px solid var(--purple-button-color);
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+.profileInner img:hover {
+  transform: scale(1.1);
+}
+
+.name {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white-color);
+}
+.website {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--purple-button-color);
+}
+.detailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 250px;
+  margin-top: 40px;
+}
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.fieldList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.value {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-secondary);
+}

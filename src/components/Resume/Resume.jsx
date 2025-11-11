@@ -61,13 +61,13 @@ function Resume() {
             </div>
             <div className={styles.box}>
               <i class="ri-book-open-line"></i>
-              <p>Degree</p>
-              <p>Bachelor's in Computer Science</p>
+              <p>University</p>
+              <p>GCUF</p>
             </div>
             <div className={styles.box}>
               <i class="ri-award-line"></i>
-              <p>Degree</p>
-              <p>Bachelor's in Computer Science</p>
+              <p>Year</p>
+              <p>2022-2026</p>
             </div>
           </div>
         </RevealOnScroll>

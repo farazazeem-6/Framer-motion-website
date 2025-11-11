@@ -1,6 +1,6 @@
 :root {
-  /* Primary Background Colors */
-  --expand-btn-hover:#2b2d31;
+  --modal-bg: rgba(21, 28, 44);
+  --expand-btn-hover: #2b2d31;
   --header-bg: rgba(21, 28, 44, 0.7);
   --header-shadow-color: rgba(21, 28, 44, 0.35);
   --mobile-menu-bg: rgba(21, 28, 44, 0.9);
@@ -20,35 +20,30 @@
   --resume-btn: rgba(31, 41, 55);
   --resume-box: rgba(28, 30, 48);
 
-  /* Text Colors */
   --white-color: #ffffff;
   --text-secondary: #bfc4ca;
   --text-muted: #4c3f6c;
 
-  /* Purple/Accent Colors */
-  --purple-color: #7c3aed; /* or your existing purple */
-  --purple-button-color: #7c3aed; /* or your existing purple button */
+  --purple-color: #7c3aed;
+  --purple-button-color: #7c3aed;
 
-  /* Gradient Colors */
   --gradient-blue: rgba(63, 94, 251, 1);
   --gradient-pink: rgba(252, 70, 107, 1);
   --gradient-rose: rgb(219, 112, 133);
   --glow-purple-start: rgba(124, 58, 237, 0.6);
   --glow-purple-mid: rgba(124, 58, 237, 0.3);
 
-  /* Hover & Interactive States */
   --hover-overlay: rgba(255, 255, 255, 0.1);
   --hover-overlay-dark: rgba(94, 92, 92, 0.1);
 
-  /* Border Colors */
   --border-purple: #4c3f6c;
   --divider-color: #fffaf0;
-
 }
 
-/* Dark Theme Variables */
 [data-theme="dark"] {
-  --expand-btn-hover:#2b2d31;
+    --modal-bg: rgba(21, 28, 44);
+
+  --expand-btn-hover: #2b2d31;
   --project-box-border: #9c27b0;
   --resume-box: rgba(28, 30, 48);
   --resume-btn: rgba(31, 41, 55);
@@ -83,7 +78,8 @@
 }
 
 [data-theme="light"] {
-  --expand-btn-hover:#ccc;
+    --modal-bg: rgb(253, 253, 253);
+  --expand-btn-hover: #ccc;
   --project-box-border: #e53935;
   --resume-box: #fff;
   --resume-btn: #ffffff;
