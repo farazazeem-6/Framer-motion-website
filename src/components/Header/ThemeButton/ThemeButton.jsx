@@ -6,7 +6,7 @@ import { toggleTheme } from "../../../features/theme/themeSlice";
 function ThemeButton() {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.mode);
-  console.log(theme);
+  // console.log(theme);
   return (
     <div onClick={() => dispatch(toggleTheme())} className={styles.toggleBtn}>
       {theme === "light" ? (

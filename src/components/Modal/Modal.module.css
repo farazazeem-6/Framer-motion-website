@@ -26,8 +26,8 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.crossBtn i{
-    color: var(--white-color);
+.crossBtn i {
+  color: var(--white-color);
 }
 .crossBtn:hover {
   transform: translateY(-5px);

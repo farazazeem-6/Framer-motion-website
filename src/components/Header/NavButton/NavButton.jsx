@@ -1,13 +1,23 @@
 import React from "react";
 import styles from "../../Header/NavButton/NavButton.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { Box } from "@mui/material";
 
 function NavButton() {
+    const location = useLocation();
+
+  const handleHomeClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
-    <div className={styles.navButtons}>
+    <Box className={styles.navButtons}>
       <ul>
         <NavLink
-          to={"/"}
+        to={'/'}
+          onClick={handleHomeClick}
           className={({ isActive }) => (isActive ? styles.activeLink : "")}
         >
           <li>Home</li>
@@ -37,8 +47,7 @@ function NavButton() {
           <li>Contact</li>
         </NavLink>
       </ul>
-    </div>
+    </Box>
   );
 }
-
 export default NavButton;

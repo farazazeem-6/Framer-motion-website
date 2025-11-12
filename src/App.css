@@ -1,3 +1,9 @@
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100%;
+}
 :root {
   --modal-bg: rgba(21, 28, 44);
   --expand-btn-hover: #2b2d31;
@@ -41,8 +47,7 @@
 }
 
 [data-theme="dark"] {
-    --modal-bg: rgba(21, 28, 44);
-
+  --modal-bg: rgba(21, 28, 44);
   --expand-btn-hover: #2b2d31;
   --project-box-border: #9c27b0;
   --resume-box: rgba(28, 30, 48);
@@ -78,7 +83,7 @@
 }
 
 [data-theme="light"] {
-    --modal-bg: rgb(253, 253, 253);
+  --modal-bg: rgb(253, 253, 253);
   --expand-btn-hover: #ccc;
   --project-box-border: #e53935;
   --resume-box: #fff;
