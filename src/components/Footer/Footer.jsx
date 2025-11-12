@@ -2,12 +2,10 @@ import React from "react";
 import styles from "../Footer/Footer.module.css";
 import { useNavigate } from "react-router-dom";
 
-
-
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // This makes it smooth scroll
+    behavior: "smooth", // This makes it smooth scroll
   });
 };
 const Footer = () => {
@@ -132,7 +130,7 @@ const Footer = () => {
         </div>
 
         {/* CTA Section */}
-        <div className={styles.ctaSection}>
+        <div id="contact-cta" className={styles.ctaSection}>
           <h3 className={styles.sectionTitle}>Let's Work Together</h3>
           <p className={styles.ctaDescription}>
             Ready to bring your ideas to life? Let's discuss your next project

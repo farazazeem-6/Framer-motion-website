@@ -42,6 +42,15 @@ const reviews = [
 ];
 
 function Testimonials() {
+  const scrollToFooterCTA = () => {
+    const ctaSection = document.getElementById("contact-cta");
+    if (ctaSection) {
+      ctaSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [result, setResult] = useState("");
@@ -137,7 +146,7 @@ function Testimonials() {
       <MarqueeDemo />
       <div className={styles.testimonialsFooter}>
         <p>Ready to join these satisfied clients?</p>
-        <button className={styles.testimonialbtn}>
+        <button onClick={scrollToFooterCTA} className={styles.testimonialbtn}>
           Start Your Project Today
         </button>
       </div>

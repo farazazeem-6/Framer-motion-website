@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
 function NavButton() {
-    const location = useLocation();
+  const location = useLocation();
 
   const handleHomeClick = (e) => {
     if (location.pathname === "/") {
@@ -16,7 +16,7 @@ function NavButton() {
     <Box className={styles.navButtons}>
       <ul>
         <NavLink
-        to={'/'}
+          to={"/"}
           onClick={handleHomeClick}
           className={({ isActive }) => (isActive ? styles.activeLink : "")}
         >

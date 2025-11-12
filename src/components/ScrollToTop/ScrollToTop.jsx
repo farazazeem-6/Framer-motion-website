@@ -13,7 +13,6 @@ const ScrollToTop = () => {
     }
   };
 
-  // Scroll to top smoothly
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -23,8 +22,6 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
-
-    // Cleanup function
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
