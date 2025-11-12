@@ -9,6 +9,7 @@ import "../../src/App.css";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import WhatsappBtn from "../components/WhatsappButton/WhatsappBtn";
 import Modal from "../components/Modal/Modal";
+import { ScrollProgress } from "../components/ui/scroll-progress";
 
 function Layout() {
   const theme = useSelector((state) => state.theme.mode);
@@ -18,6 +19,7 @@ function Layout() {
 
   return (
     <Fragment>
+      <ScrollProgress />
       <Header />
       <Outlet />
       <PageWrapper>

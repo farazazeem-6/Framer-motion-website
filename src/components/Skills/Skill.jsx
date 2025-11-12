@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import styles from "../../components/Skills/Skill.module.css";
-import SkillCard from "../SkillCard/SkillCard";
+import SkillCard from "../SkillCard/SkillCard.jsx";
 import ReactImg from "../../utils/images/react.png";
 import typeScriptImg from "../../utils/images/typescript.png";
 import tailwindImg from "../../utils/images/tailwindcss.png";
@@ -20,29 +20,30 @@ import postamnImg from "../../utils/images/postman-.png";
 import contextApiImg from "../../utils/images/modelcontext.png";
 import About from "../About/About";
 
-const frontEndSkills = {
-  [ReactImg]: "React JS",
-  [typeScriptImg]: "TypeScript",
-  [tailwindImg]: "Tailwind Css",
-  [framerImg]: "Framer",
-  [sassImg]: "Scss",
-  [hookFormImg]: "React Hook Form",
-  [boxesImg]: "React Router DOM",
-};
-const backEndSkills = {
-  [nodeImg]: "Node JS",
-  [expressImg]: "Express JS",
-  [databaseImg]: "Mongo DB",
-};
-const statekills = {
-  [reduxImg]: "RTK",
-  [contextApiImg]: "Context API",
-};
-const tools = {
-  [figmaImg]: "Figma",
-  [postamnImg]: "Postman",
-  [shadcnImg]: "Shadcn UI",
-};
+const frontEndSkills = [
+  { imgSrc: ReactImg, text: "React JS", progress: 70 },
+  { imgSrc: typeScriptImg, text: "TypeScript", progress: 40 },
+  { imgSrc: tailwindImg, text: "Tailwind Css", progress: 80 },
+  { imgSrc: framerImg, text: "Framer", progress: 60 },
+  { imgSrc: sassImg, text: "Scss", progress: 90 },
+  { imgSrc: hookFormImg, text: "React Hook Form", progress: 90 },
+  { imgSrc: boxesImg, text: "React Router DOM", progress: 80 },
+];
+const backEndSkills = [
+  { imgSrc: nodeImg, text: "Node JS", progress: 30 },
+  { imgSrc: expressImg, text: "Express JS", progress: 40 },
+  { imgSrc: databaseImg, text: "Mongo DB", progress: 50 },
+];
+const statekills = [
+  { imgSrc: reduxImg, text: "RTK", progress: 75 },
+  { imgSrc: contextApiImg, text: "Context API", progress: 90 },
+];
+
+const tools = [
+  { imgSrc: figmaImg, text: "Figma", progress: 50 },
+  { imgSrc: postamnImg, text: "Postman", progress: 60 },
+  { imgSrc: shadcnImg, text: "Shadcn UI", progress: 85 },
+];
 
 // Reusable Animation Wrapper
 export const RevealOnScroll = ({ children, delay = 0 }) => {
@@ -52,8 +53,8 @@ export const RevealOnScroll = ({ children, delay = 0 }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }} //change y from 100 to 50
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} //change y from 100 to 50
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: delay, ease: "easeOut" }}
     >
       {children}
@@ -107,12 +108,13 @@ function Skill() {
               <AnimatedLine className={styles.frontEndLine} />
             </div>
             <div className={styles.boxes}>
-              {Object.entries(frontEndSkills).map(([imgSrc, text], index) => (
+              {frontEndSkills.map((obj, index) => (
                 <SkillCard
-                  key={imgSrc}
-                  imgSrc={imgSrc}
-                  text={text}
+                  key={obj.text}
+                  imgSrc={obj.imgSrc}
+                  text={obj.text}
                   index={index}
+                  progress={obj.progress}
                 />
               ))}
             </div>
@@ -127,12 +129,13 @@ function Skill() {
               <AnimatedLine className={styles.backendLine} />
             </div>
             <div className={styles.boxes}>
-              {Object.entries(backEndSkills).map(([imgSrc, text], index) => (
+              {backEndSkills.map((obj, index) => (
                 <SkillCard
-                  key={imgSrc}
-                  imgSrc={imgSrc}
-                  text={text}
+                  key={obj.text}
+                  imgSrc={obj.imgSrc}
+                  text={obj.text}
                   index={index}
+                  progress={obj.progress}
                 />
               ))}
             </div>
@@ -147,12 +150,13 @@ function Skill() {
               <AnimatedLine className={styles.stateManagLine} />
             </div>
             <div className={styles.boxes}>
-              {Object.entries(statekills).map(([imgSrc, text], index) => (
+              {statekills.map((obj, index) => (
                 <SkillCard
-                  key={imgSrc}
-                  imgSrc={imgSrc}
-                  text={text}
+                  key={obj.text}
+                  imgSrc={obj.imgSrc}
+                  text={obj.text}
                   index={index}
+                  progress={obj.progress}
                 />
               ))}
             </div>
@@ -167,16 +171,14 @@ function Skill() {
               <AnimatedLine className={styles.toolsManagmentLine} />
             </div>
             <div className={styles.boxes}>
-              {Object.entries(tools).map(([imgSrc, text], index) => (
-                <motion.div
-                  key={imgSrc}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <SkillCard imgSrc={imgSrc} text={text} />
-                </motion.div>
+              {tools.map((obj, index) => (
+                <SkillCard
+                  key={obj.text}
+                  imgSrc={obj.imgSrc}
+                  text={obj.text}
+                  index={index}
+                  progress={obj.progress}
+                />
               ))}
             </div>
           </div>
