@@ -20,7 +20,7 @@ function Layout() {
   return (
     <Fragment>
       <ScrollProgress />
-      {/* <BasicModal/> */}
+      <BasicModal/>
       <Header />
       <Outlet />
       <PageWrapper>
