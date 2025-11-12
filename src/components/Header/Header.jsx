@@ -5,9 +5,10 @@ import ThemeButton from "./ThemeButton/ThemeButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
+import Modal from "../Modal/Modal";
 
 function setRealVh() {
   const vh = window.innerHeight * 0.01;
@@ -17,7 +18,16 @@ window.addEventListener("resize", setRealVh);
 window.addEventListener("orientationchange", setRealVh);
 setRealVh();
 
-function Header({ onLogoClick }) {
+function Header() {
+  const location = useLocation();
+
+  const handleHomeClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +47,12 @@ function Header({ onLogoClick }) {
               />
             </div>
             <div className={styles.logoText}>
-              <p className={styles.firstName}>Muhammad Faraz </p>
+              <p
+                className={styles.firstName}
+                onClick={() => setIsModalOpen(true)}
+              >
+                Muhammad Faraz
+              </p>
               <p className={styles.infoText}>Front end developer</p>
             </div>
           </div>
@@ -113,6 +128,7 @@ function Header({ onLogoClick }) {
             <ul>
               <NavLink
                 to={"/"}
+                onClick={handleHomeClick}
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : ""
                 }
@@ -182,6 +198,9 @@ function Header({ onLogoClick }) {
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen} isOpen={isModalOpen} />
+      )}
     </>
   );
 }

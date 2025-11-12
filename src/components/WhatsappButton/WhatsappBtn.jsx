@@ -8,7 +8,7 @@ const WhatsappBtn = () => {
   return (
     <>
       <button onClick={handleWhatsAppClick} className={styles.scrollToTop}>
-        <i class="ri-whatsapp-line"></i>
+        <i className="ri-whatsapp-line"></i>
       </button>
     </>
   );

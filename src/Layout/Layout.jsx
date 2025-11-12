@@ -11,26 +11,20 @@ import WhatsappBtn from "../components/WhatsappButton/WhatsappBtn";
 import Modal from "../components/Modal/Modal";
 
 function Layout() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   const theme = useSelector((state) => state.theme.mode);
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
     <Fragment>
-      <Header onLogoClick={openModal} />
+      <Header />
       <Outlet />
       <PageWrapper>
         <Footer />
       </PageWrapper>
       <WhatsappBtn />
       <ScrollToTop />
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </Fragment>
   );
 }
