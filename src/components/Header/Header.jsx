@@ -9,6 +9,10 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import Modal from "../Modal/Modal";
+import ImageModal from "../ImageModal/ImageModal";
+import HeroImg from "../../../public/personal.jpeg";
+
+
 
 function setRealVh() {
   const vh = window.innerHeight * 0.01;
@@ -28,6 +32,7 @@ function Header() {
     }
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImgModalOpen, setImageModalOpen] = useState(false);
 
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,8 +46,9 @@ function Header() {
           <div className={styles.logo}>
             <div className={styles.logoImgCont}>
               <img
+                onClick={() => setImageModalOpen(true)}
                 className={styles.logoImg}
-                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+                src={HeroImg}
                 alt=""
               />
             </div>
@@ -98,7 +104,7 @@ function Header() {
                 <div className={styles.mobileLogoImgCont}>
                   <img
                     className={styles.mobileLogoImg}
-                    src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+                    src={HeroImg}
                     alt=""
                   />
                 </div>
@@ -201,6 +207,7 @@ function Header() {
       {isModalOpen && (
         <Modal setIsModalOpen={setIsModalOpen} isOpen={isModalOpen} />
       )}
+      {isImgModalOpen && <ImageModal setImageModalOpen={setImageModalOpen} />}
     </>
   );
 }

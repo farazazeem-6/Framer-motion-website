@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
 import "../YoutubeModal/YoutubeModal.css";
+import HeroImg from "../../../public/personal.jpeg";
 
 const style = {
   position: "absolute",
@@ -51,22 +52,42 @@ const primary = {
 };
 
 export default function BasicModal() {
-  const [open, setOpen] = useState(() => {
-    const dontShow = localStorage.getItem("hidePortfolioModal");
-    return !dontShow;
-  });
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const hideUntil = localStorage.getItem("hidePortfolioModalUntil");
+    
+    if (hideUntil) {
+      const hideUntilTime = parseInt(hideUntil);
+      const currentTime = Date.now();
+      
+      // If current time is past the hide time, show the modal
+      if (currentTime > hideUntilTime) {
+        setOpen(true);
+        // Remove the expired timestamp
+        localStorage.removeItem("hidePortfolioModalUntil");
+      }
+    } else {
+      // No timestamp exists, show modal
+      setOpen(true);
+    }
+  }, []);
 
   const handleClose = () => setOpen(false);
 
   const handleDontShowAgain = () => {
-    localStorage.setItem("hidePortfolioModal", "true");
+
+    // const daysToHide = 7;
+    const hideUntilTime = Date.now() + (1 * 60 * 1000);
+
+    // const hideUntilTime = Date.now() + (daysToHide * 24 * 60 * 60 * 1000);
+    
+    localStorage.setItem("hidePortfolioModalUntil", hideUntilTime.toString());
     setOpen(false);
   };
+
   return (
     <div>
-      {/* <Button sx={{ zIndex: 1000 }} variant="contained" onClick={handleOpen}>
-        Open Modal
-      </Button> */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -76,11 +97,7 @@ export default function BasicModal() {
         <Box sx={style}>
           <Typography sx={heading}>Welcome to My Portfolio!</Typography>
           <Box sx={img}>
-            <img
-              sx={{ width: "100px" }}
-              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
-              alt=""
-            />
+            <img sx={{ width: "100px" }} src={HeroImg} alt="" />
           </Box>
           <Box
             sx={{

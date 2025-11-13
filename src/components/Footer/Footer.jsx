@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../Footer/Footer.module.css";
 import { useNavigate } from "react-router-dom";
+import HeroImg from "../../../public/personal.jpeg";
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -17,10 +18,7 @@ const Footer = () => {
         <div className={styles.profileSection}>
           <div className={styles.profileHeader}>
             <div className={styles.profileImage}>
-              <img
-                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
-                alt=""
-              />
+              <img src={HeroImg} alt="" />
             </div>
             <div className={styles.profileInfo}>
               <h2 className={styles.profileName}>Muhammad Faraz</h2>
