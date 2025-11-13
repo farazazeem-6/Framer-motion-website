@@ -4,6 +4,8 @@ import { cn } from "../../lib/utils";
 import Header from "../Header/Header";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import HeroImg from "../../../public/personal.jpeg";
+
 
 const TEXTS = [
   "Frontend Developer",
@@ -85,7 +87,7 @@ function Hero() {
         </div>
         <div className={styles.heroImgCont}>
           <img
-            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            src={HeroImg}
             alt=""
           />
           <div className={`${styles.label} ${styles.label1}`}>
