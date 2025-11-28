@@ -6,40 +6,40 @@ import { useSelector } from "react-redux";
 
 const reviews = [
   {
-    name: "Ayesha Khan",
-    username: "@aysha_2",
-    body: "I absolutely love how simple and smooth the experience was! Everything worked perfectly, and I got exactly what I needed without any hassle. Highly recommended",
-    img: "https://plus.unsplash.com/premium_photo-1690407617686-d449aa2aad3c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+    name: "Usman Abbas",
+    username: "@usmanabbas",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://images.unsplash.com/photo-1644383431542-19f678c3e207?q=80&w=971&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Rohan Mehta",
-    username: "@rohenmehta1",
-    body: "This platform exceeded my expectations. The design is modern, and the process is super easy to follow. I’ll definitely be coming back again!",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387",
+    name: "Bilal Khawaja",
+    username: "@nothing.",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://images.unsplash.com/photo-1722354980566-ec247cb4f1a8?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Emily Carter",
-    username: "@emilacarter",
-    body: "Amazing service! The attention to detail and customer support really stood out. It felt like everything was built with the user in mind.",
-    img: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
+    name: "Ali Akbar",
+    username: "@aliM",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://images.unsplash.com/photo-1711045290148-9dc18f7776fb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Hamza Qureshi",
-    username: "@hmza123",
-    body: "I was impressed with how quick and responsive everything was. The overall experience felt premium and effortless. Keep up the great work!",
-    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=464",
+    name: "Fatima",
+    username: "@fatima",
+    body: "Fast and responsive UI.Love your work.Thanks.",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmPPoHhb5Hl45zqf2PhZ-GCHRU-fllf-2gkPeLoAan4x85YbsrmXaztU&s",
   },
   {
-    name: "Jessica Brown",
-    username: "@jessi",
-    body: "Fantastic interface and really intuitive to use. I found what I needed instantly. It’s rare to see something this well put together",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387",
+    name: "Saira",
+    username: "@sarii",
+    body: "I am happy to work with you Faraz. This is amazing. I love it.",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPGJtvcEk4Lm5Y52Jk2LG2nRnFQoQjfTDcuL5OeBSsYFXCtoTymuWYc3E&s",
   },
   {
-    name: "James",
+    name: "Jammy",
     username: "@james",
-    body: "This is one of the most reliable services I’ve used recently. Everything works smoothly, and the results are always consistent. Five stars!",
-    img: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+    body: "Very fast and beautiful UI design.Amazing work!",
+    img: "https://avatar.vercel.sh/james",
   },
 ];
 
@@ -90,7 +90,7 @@ export function MarqueeDemo() {
         ))}
       </Marquee>
       <div
-        className={`pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r z-10 ${
+        className={`pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r z-10 ${
           theme === "light"
             ? "from-[rgba(255,255,255,1)] via-[rgba(255,255,255,0.8)] to-transparent"
             : "from-[rgba(30,34,50,1)] via-[rgba(30,34,50,0.8)] to-transparent"
@@ -98,7 +98,7 @@ export function MarqueeDemo() {
       />
 
       <div
-        className={`pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l z-10 ${
+        className={`pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l z-10 ${
           theme === "light"
             ? "from-[rgba(255,255,255,1)] via-[rgba(255,255,255,0.8)] to-transparent"
             : "from-[rgba(30,34,50,1)] via-[rgba(30,34,50,0.8)] to-transparent"

@@ -232,4 +232,10 @@
   .skillCalcs {
     font-size: 12px;
   }
+  .skillHeading{
+    font-size: 2rem;
+  }
+  .skillText p{
+    font-size: 14px;
+  }
 }
