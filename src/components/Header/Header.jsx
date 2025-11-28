@@ -46,7 +46,7 @@ function Header() {
           <div className={styles.logo}>
             <div className={styles.logoImgCont}>
               <img
-                onClick={() => setImageModalOpen(true)}
+                // onClick={() => setImageModalOpen(true)}
                 className={styles.logoImg}
                 src={HeroImg}
                 alt=""
@@ -55,7 +55,7 @@ function Header() {
             <div className={styles.logoText}>
               <p
                 className={styles.firstName}
-                onClick={() => setIsModalOpen(true)}
+                // onClick={() => setIsModalOpen(true)}
               >
                 Muhammad Faraz
               </p>
